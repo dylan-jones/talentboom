@@ -198,22 +198,84 @@
   }
 
   &-africa {
-    left: 53rem;
-    top: 49rem;
+    left: 15rem;
+    top: 13rem;
+    transform: scale(0.7);
+
+    @include breakpoint($tablet) {
+      left: 37rem;
+      top: 33.5rem;
+      transform: scale(0.1);
+    }
+
+    @include breakpoint($laptop) {
+      left: 53rem;
+      top: 49rem;
+    }
+
+    @include breakpoint($desktop) {
+      left: 64rem;
+      top: 60rem;
+    }
   }
 
   &-europe {
     left: 50rem;
     top: 20rem;
+
+    @include breakpoint($tablet) {
+      left: 50rem;
+      top: 20rem;
+    }
+
+    @include breakpoint($laptop) {
+      left: 50rem;
+      top: 20rem;
+    }
+
+    @include breakpoint($desktop) {
+      left: 50rem;
+      top: 20rem;
+    }
   }
 
   &-asia {
     left: 82rem;
     top: 32rem;
+
+    @include breakpoint($tablet) {
+      left: 82rem;
+      top: 32rem;
+    }
+
+    @include breakpoint($laptop) {
+      left: 82rem;
+      top: 32rem;
+    }
+
+    @include breakpoint($desktop) {
+      left: 82rem;
+      top: 32rem;
+    }
   }
 
   &-usa {
     left: 21rem;
     top: 28rem;
+
+    @include breakpoint($tablet) {
+      left: 21rem;
+      top: 28rem;
+    }
+
+    @include breakpoint($laptop) {
+      left: 21rem;
+      top: 28rem;
+    }
+
+    @include breakpoint($desktop) {
+      left: 21rem;
+      top: 28rem;
+    }
   }
 }

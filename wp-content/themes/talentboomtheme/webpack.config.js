@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
-var sitename = 'talent-boom';
+var sitename = 'thetalentboom';
 
 module.exports = {
   entry: {

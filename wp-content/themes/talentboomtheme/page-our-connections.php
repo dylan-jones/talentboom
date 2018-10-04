@@ -27,10 +27,30 @@
           <div class="container">
             <img src="<?php echo get_template_directory_uri(); ?>/app/img/map.svg" alt="map" />
             <div class="pin-locations">
-              <a href="<?php echo home_url(); ?>/connection/africa" class="pin pin-africa" data-loc="africa"></a>
-              <a href="<?php echo home_url(); ?>/connection/asia" class="pin pin-asia" data-loc="asia"></a>
-              <a href="<?php echo home_url(); ?>/connection/europe" class="pin pin-europe" data-loc="europe"></a>
-              <a href="<?php echo home_url(); ?>/connection/usa" class="pin pin-usa" data-loc="usa"></a>
+              <a href="<?php echo home_url(); ?>/connection/africa" class="pin pin-africa" data-loc="africa">
+                <div class="pin-location-pop">
+                  <div class="title">The Talent Boom</div>
+                  <div class="location">Cape Town</div>
+                </div>
+              </a>
+              <a href="<?php echo home_url(); ?>/connection/asia" class="pin pin-asia" data-loc="asia">
+                <div class="pin-location-pop">
+                  <div class="title">The Talent Boom</div>
+                  <div class="location">Location Name</div>
+                </div>
+              </a>
+              <a href="<?php echo home_url(); ?>/connection/europe" class="pin pin-europe" data-loc="europe">
+                <div class="pin-location-pop">
+                  <div class="title">The Talent Boom</div>
+                  <div class="location">Location Name</div>
+                </div>
+              </a>
+              <a href="<?php echo home_url(); ?>/connection/usa" class="pin pin-usa" data-loc="usa">
+                <div class="pin-location-pop">
+                  <div class="title">The Talent Boom</div>
+                  <div class="location">Location Name</div>
+                </div>
+              </a>
             </div>
           </div>
         </div>

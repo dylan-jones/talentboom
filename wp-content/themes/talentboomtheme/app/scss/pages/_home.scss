@@ -17,8 +17,16 @@
       top: 0;
       right: 0;
       transform: translate(80rem,-44rem);
-      width: 134rem;
+      width: 113rem;
       margin: 0 auto;
+    }
+
+    @include breakpoint($laptop) {
+      width: 113rem;
+    }
+
+    @include breakpoint($desktop) {
+      width: 134rem;
     }
   }
 
@@ -27,7 +35,18 @@
     padding: 0 3rem;
 
     .content {
-      max-width: 80rem;
+
+      @include breakpoint($tablet) {
+        padding-right: 31rem;
+      }
+
+      @include breakpoint($laptop) {
+        padding-right: 31rem;
+      }
+
+      @include breakpoint($desktop) {
+        padding-right: 31rem;
+      }
 
       .matches-svg {
         width: 100%;
@@ -50,14 +69,14 @@
 
 .large-buttons-top {
 
-  @include breakpoint($tablet) {
+  @include breakpoint($laptop) {
     margin-top: -3rem;
   }
 
   .container {
     padding: 0 3rem;
 
-    @include breakpoint($tablet) {
+    @include breakpoint($laptop) {
       display: flex;
       justify-content: space-between;
       padding: 0 6rem;
@@ -66,7 +85,6 @@
 
   .box {
     width: 100%;
-    max-width: 50rem;
     height: 15rem;
     background-color: $light-green;
     color: $white;
@@ -115,8 +133,9 @@
       background-color: $dark-green;
     }
 
-    @include breakpoint($tablet) {
+    @include breakpoint($laptop) {
       width: 48%;
+      max-width: 50rem;
       height: 33rem;
       border-radius: 4rem;
       margin-bottom: 0;
@@ -160,6 +179,14 @@
     transform: translate(-41rem,40rem);
     width: 70vw;
     max-width: 114.6rem;
+
+    @include breakpoint($laptop) {
+      bottom: 14rem;
+    }
+
+    @include breakpoint($desktop) {
+      bottom: 0;
+    }
   }
 
   .container {
@@ -204,9 +231,18 @@
         top: 3rem;
         width: 8rem;
 
+        @include breakpoint($tablet) {
+          right: 15rem;
+          top: 6rem;
+        }
+
         @include breakpoint($laptop) {
-          padding: 12rem 0;
           width: 11rem;
+          right: 15rem;
+          top: 6rem;
+        }
+
+        @include breakpoint($desktop) {
           right: 15rem;
           top: 6rem;
         }
@@ -232,8 +268,8 @@
   .container {
     padding: 0 3rem;
 
-    @include breakpoint($tablet) {
-      padding: 0;
+    @include breakpoint($laptop) {
+      padding: 0 2rem;
     }
 
     h3 {
@@ -321,7 +357,7 @@
   }
   padding: 6rem 0;
 
-  @include breakpoint($tablet) {
+  @include breakpoint($laptop) {
     padding: 12rem 0;
   }
 

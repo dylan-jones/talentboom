@@ -124,14 +124,14 @@
 
 .connections-map {
   background-color: $white;
-  padding: 6rem 3rem;
+  padding: 6rem 0;
 
   .container {
     position: relative;
   }
 
   @include breakpoint($tablet) {
-    padding: 6rem;
+    padding: 6rem 0;
   }
 
   .tabs {
@@ -197,6 +197,12 @@
     size: contain;
   }
 
+  &.is-active {
+    .pin-location-pop {
+      display: block;
+    }
+  }
+
   &-africa {
     left: 15rem;
     top: 13rem;
@@ -205,7 +211,7 @@
     @include breakpoint($tablet) {
       left: 37rem;
       top: 33.5rem;
-      transform: scale(0.1);
+      transform: scale(1);
     }
 
     @include breakpoint($laptop) {
@@ -220,12 +226,14 @@
   }
 
   &-europe {
-    left: 50rem;
-    top: 20rem;
+    left: 14rem;
+    top: 4rem;
+    transform: scale(0.7);
 
     @include breakpoint($tablet) {
-      left: 50rem;
-      top: 20rem;
+      left: 34rem;
+      top: 13rem;
+      transform: scale(1);
     }
 
     @include breakpoint($laptop) {
@@ -234,18 +242,20 @@
     }
 
     @include breakpoint($desktop) {
-      left: 50rem;
-      top: 20rem;
+      left: 59rem;
+      top: 25rem;
     }
   }
 
   &-asia {
-    left: 82rem;
-    top: 32rem;
+    left: 23.5rem;
+    top: 7rem;
+    transform: scale(0.7);
 
     @include breakpoint($tablet) {
-      left: 82rem;
-      top: 32rem;
+      left: 57rem;
+      top: 20.5rem;
+      transform: scale(1);
     }
 
     @include breakpoint($laptop) {
@@ -254,18 +264,20 @@
     }
 
     @include breakpoint($desktop) {
-      left: 82rem;
-      top: 32rem;
+      left: 99rem;
+      top: 38rem;
     }
   }
 
   &-usa {
-    left: 21rem;
-    top: 28rem;
+    left: 5.5rem;
+    top: 6rem;
+    transform: scale(0.7);
 
     @include breakpoint($tablet) {
-      left: 21rem;
-      top: 28rem;
+      left: 15rem;
+      top: 18rem;
+      transform: scale(1);
     }
 
     @include breakpoint($laptop) {
@@ -274,8 +286,35 @@
     }
 
     @include breakpoint($desktop) {
-      left: 21rem;
-      top: 28rem;
+      left: 26rem;
+      top: 33rem;
+    }
+  }
+
+  &-location-pop {
+    position: absolute;
+    display: none;
+    min-width: 13.5rem;
+    height: 7rem;
+    border: 6px solid $light-green;
+    background-color: $dark-green;
+    border-radius: 1.7rem;
+    color: $white;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0 1rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    .location {
+      font-weight: bold;
+      white-space: nowrap
+    }
+
+    .title {
+      margin-top: 8px;
+      white-space: nowrap
     }
   }
 }

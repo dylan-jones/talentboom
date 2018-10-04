@@ -8,7 +8,7 @@
     .slide {
       padding: 0 3rem;
 
-      @include breakpoint($tablet) {
+      @include breakpoint($laptop) {
         padding: 0;
       }
     }  
@@ -34,7 +34,7 @@
       }
       text-indent: -9999px;
 
-      @include breakpoint($tablet) {
+      @include breakpoint($laptop) {
         width: 2.4rem;
         height: 4rem;
       }
@@ -44,7 +44,7 @@
       left: 1rem;
       transform: rotate(180deg);
 
-      @include breakpoint($tablet) {
+      @include breakpoint($laptop) {
         left: 0;
       }
     }
@@ -52,7 +52,7 @@
     .bx-next {
       right: 1rem;
 
-      @include breakpoint($tablet) {
+      @include breakpoint($laptop) {
         right: 0;
       }
     }

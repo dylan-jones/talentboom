@@ -211,9 +211,14 @@
   transform: translate(100%,0);
   transition: all 0.4s ease;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
   padding: 6rem 3rem 2rem;
+
+  .btn.btn-primary.call-to-action {
+    margin-top: 2rem;
+  }
 
   ul {
     margin: 0;
@@ -261,6 +266,10 @@
         &:after {
           opacity: 1;
         }
+      }
+
+      .sub-menu {
+        display: none;
       }
     }
   }

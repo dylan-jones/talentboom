@@ -1,0 +1,74 @@
+.single-connection {
+  background-color: $light-green;
+
+  section .container {
+    padding: 8rem 2rem 6rem;
+    color: $white;
+    font-size: responsive 1.8rem 2.4rem;
+
+    @include breakpoint($laptop) {
+      padding: 14rem 2rem 12rem;
+    }
+
+    h1 {
+      font-family: "cortado";
+      font-size: responsive 5rem 9rem;
+      margin: 0 0 2rem 0;
+      color: $dark-green;
+      text-align: center;
+    }
+
+    .location-info {
+      margin: 1rem 0 0 0;
+      padding: 4rem 0 0 0;
+      border-top: 1px solid $white;
+      width: 100%;
+
+      span {
+        display: block;
+        width: 100%;
+        position: relative;
+        padding-left: 5rem;
+        margin-bottom: 1rem;
+        font-size: responsive 1.6rem 1.8rem;
+
+        &:before {
+          content: '';
+          width: 2.5rem;
+          height: 2,5rem;
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: {
+            position: center;
+            repeat: no-repeat;
+            size: contain;
+          }
+        }
+
+        &.tel {
+          &:before {
+            background-image: url('../img/icon-tel-white.svg');
+          }
+        }
+
+        &.email {
+          &:before {
+            background-image: url('../img/icon-mail-white.svg');
+          }
+        }
+
+        &.address {
+          &:before {
+            background-image: url('../img/icon-location-white.svg');
+          }
+        }
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}

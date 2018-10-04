@@ -1,0 +1,87 @@
+.our-clients {
+  .intro-section .content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .clients-list {
+    padding: 6rem 2rem;
+    background-color: $white;
+
+    @include breakpoint($laptop) {
+      padding: 10rem 0;
+    }
+
+    h3 {
+      font-family: "cortado";
+      font-size: responsive 4.3rem 6.8rem;
+      margin: 0;
+      color: $light-green;
+    }
+
+    ul {
+      margin: 2rem 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      li {
+        list-style: none;
+        width: 48%;
+        margin-bottom: 1.2rem;
+        border: 3px solid rgba($primary-blue, 0.14);
+        height: 18.2rem;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint($tablet) {
+          width: 32%;
+        }
+
+        @include breakpoint($laptop) {
+          width: 24%;
+        }
+      }
+    }
+  }
+
+  .client-about-section {
+    padding: 6rem 2rem;
+    font-size: responsive 1.6rem 2.2rem;
+
+    @include breakpoint($laptop) {
+      padding: 10rem 0;
+    }
+
+    h3 {
+      font-family: "cortado";
+      font-size: responsive 4.3rem 6.8rem;
+      margin: 0;
+      color: $light-green;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: 2rem;
+        font-size: responsive 1.6rem 2.2rem;
+        list-style: none;
+        padding-left: 3rem;
+        position: relative;
+        
+        &:before {
+          content: '•';
+          color: $light-green;
+          position: relative;
+          left: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+}

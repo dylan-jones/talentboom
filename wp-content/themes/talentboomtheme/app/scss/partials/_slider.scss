@@ -1,0 +1,60 @@
+.slider {
+  position: relative;
+
+  .bx-viewport {
+    max-width: 78rem;
+    margin: 0 auto;
+
+    .slide {
+      padding: 0 3rem;
+
+      @include breakpoint($tablet) {
+        padding: 0;
+      }
+    }  
+  }
+
+  .bx-controls {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 100%;
+
+    .bx-prev,
+    .bx-next {
+      position: absolute;
+      z-index: 10;
+      width: 1.3rem;
+      height: 2.5rem;
+      background: {
+        image: url(../img/slider-arrow.svg);
+        repeat: no-repeat;
+        position: center center;
+        size: contain;
+      }
+      text-indent: -9999px;
+
+      @include breakpoint($tablet) {
+        width: 2.4rem;
+        height: 4rem;
+      }
+    }
+
+    .bx-prev {
+      left: 1rem;
+      transform: rotate(180deg);
+
+      @include breakpoint($tablet) {
+        left: 0;
+      }
+    }
+
+    .bx-next {
+      right: 1rem;
+
+      @include breakpoint($tablet) {
+        right: 0;
+      }
+    }
+  }
+}

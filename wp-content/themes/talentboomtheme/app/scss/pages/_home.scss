@@ -1,0 +1,362 @@
+.landing-top {
+  height: auto;
+  width: 100%;
+  position: relative;
+
+  @include breakpoint($tablet) {
+    height: 100vh;
+  }
+
+  .image {
+    position: relative;
+    width: calc(100% + 8rem);
+    margin: -30% -4rem 2rem;
+
+    @include breakpoint($tablet) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(80rem,-44rem);
+      width: 134rem;
+      margin: 0 auto;
+    }
+  }
+
+  .container {
+    position: relative;
+    padding: 0 3rem;
+
+    .content {
+      max-width: 80rem;
+
+      .matches-svg {
+        width: 100%;
+        max-width: 60rem;
+        display: block;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        font-size: responsive 2.3rem 2.8rem;
+      }
+    }
+
+    @include breakpoint($tablet) {
+      top: 50%;
+      transform: translate(0,-50%);
+    }
+  }
+}
+
+.large-buttons-top {
+
+  @include breakpoint($tablet) {
+    margin-top: -3rem;
+  }
+
+  .container {
+    padding: 0 3rem;
+
+    @include breakpoint($tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 6rem;
+    }
+  }
+
+  .box {
+    width: 100%;
+    max-width: 50rem;
+    height: 15rem;
+    background-color: $light-green;
+    color: $white;
+    text-align: center;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: responsive 2.5rem 4rem;
+      margin: 0;
+
+      span {
+        text-transform: normal;
+        font-size: responsive 5.5rem 9rem;
+        font-family: "cortado";
+        display: block;
+      }
+    }
+
+    .hidden {
+      display: none;
+      padding: 0 2rem;
+      width: 100%;
+
+      a {
+        color: $white;
+        font-weight: $bold;
+        display: block;
+      }
+    }
+
+    &.active {
+      background-image: url('../img/pattern.png');
+
+      .hidden {
+        display: block;
+      }
+    }
+
+    &:last-child {
+      background-color: $dark-green;
+    }
+
+    @include breakpoint($tablet) {
+      width: 48%;
+      height: 33rem;
+      border-radius: 4rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.job-search-bar {
+  background-color: $white;
+  padding: 6rem 0;
+  margin-top: 6rem;
+
+  @include breakpoint($tablet) {
+    padding: 10rem 0;
+    margin-top: 11rem;
+  }
+
+  .container {
+    padding: 0 3rem;
+
+    @include breakpoint($tablet) {
+      padding: 0;
+    }
+
+    h3 {
+      font-family: "cortado";
+      font-size: responsive 4.3rem 6.8rem;
+      margin: 0;
+      color: $light-green;
+    }
+  }
+}
+
+.about-section {
+  position: relative;
+
+  .image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-41rem,40rem);
+    width: 70vw;
+    max-width: 114.6rem;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 3rem;
+
+    @include breakpoint($tablet) {
+      padding: 0;
+    }
+
+    .content {
+      max-width: 69rem;
+      padding: 6rem 0;
+      position: relative;
+
+      @include breakpoint($tablet) {
+        padding: 12rem 0;
+      }
+
+      img {
+        width: 100%;
+        max-width: 69.4rem;
+        display: block;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        font-family: "cortado";
+        margin: 0;
+        font-size: responsive 4.3rem 6.8rem;
+        color: $light-green;
+      }
+
+      .light-bulb {
+        position: absolute;
+        height: auto;
+        display: block;
+        right: 0rem;
+        top: 3rem;
+        width: 8rem;
+
+        @include breakpoint($laptop) {
+          padding: 12rem 0;
+          width: 11rem;
+          right: 15rem;
+          top: 6rem;
+        }
+      }
+
+      p {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}
+
+.home-global-connections {
+  background-color: $white;
+  position: relative;
+  z-index: 1;
+  padding: 6rem 0;
+
+  @include breakpoint($tablet) {
+    padding: 12rem 0;
+  }
+
+  .container {
+    padding: 0 3rem;
+
+    @include breakpoint($tablet) {
+      padding: 0;
+    }
+
+    h3 {
+      font-family: "cortado";
+      margin: 0 0 6rem;
+      font-size: responsive 4rem 6.8rem;
+      color: $light-green;
+    }
+
+    .connections-blocks {
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+          width: 49%;
+          list-style: none;
+          padding: 0;
+          margin-bottom: 2%;
+          border: 3px solid rgba($primary-blue, 0.13);
+          height: 18.2rem;
+          background-color: $white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include breakpoint($tablet) {
+            width: 24%;
+          }
+
+          &:last-child {
+            background-color: $dark-green;
+            color: $white;
+            font-size: responsive 1.8rem 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+              color: $white;
+            }
+          }
+        }
+
+        &.locations {
+          li {
+            border: none;
+            background-color: transparent;
+
+            a {
+              font-size: responsive 4.2rem 6.8rem;
+              font-family: "cortado";
+              color: $dark-green;
+              background-color: $lumo-green;
+              display: block;
+              width: 100%;
+              padding: 3rem 0;
+              text-align: center;
+              transition: transform 0.3s ease;
+              border-radius: 1rem;
+
+              &:hover {
+                transform: scale(1.08);
+              }
+
+              @include breakpoint($tablet) {
+                padding: 6rem 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.testimonial-slider {
+  background-color: $light-green;
+  background: {
+    image: url('../img/pattern.png');
+    color: $light-green;
+  }
+  padding: 6rem 0;
+
+  @include breakpoint($tablet) {
+    padding: 12rem 0;
+  }
+
+  .container {
+    text-align: center;
+
+    h3 {
+      font-family: "cortado";
+      margin: 0;
+      font-size: responsive 4rem 6.8rem;
+      color: $white;
+    }
+
+    .slide {
+      p {
+        color: $white;
+      }
+
+      span {
+        font-weight: $bold;
+        color: $white;
+      }
+    }
+  }
+}
+.btn.btn-primary {
+  &.call-to-action {
+    z-index: 110;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+
+    @include breakpoint($laptop) {
+      position: fixed;
+      top: 3rem;
+      right: 2rem;
+    }
+  }
+}

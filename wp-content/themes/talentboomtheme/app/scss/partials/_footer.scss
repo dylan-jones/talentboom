@@ -1,0 +1,129 @@
+.footer {
+  width: 100%;
+  border-top: 1px solid #DEDEDE;
+
+  @include breakpoint($laptop) {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .pre-footer {
+    background-color: $background-grey;
+
+    .container {
+      padding: 5rem 0;
+
+      @include breakpoint($laptop) {
+        display: flex;
+        padding: 5rem 2rem;
+      }
+
+      .column {
+        padding: 0 4rem;
+        font-size: 1.8rem;
+        flex-grow: 1;
+        text-align: center;
+
+        @include breakpoint($laptop) {
+          padding: 0 9rem;
+          border-right: 1px solid $border-color;
+          text-align: left;
+        }
+
+        @include breakpoint($desktop) {
+          padding: 0 10rem;
+        }
+
+        h4 {
+          margin: 0 0 2rem;
+          font-weight: $bold;
+          font-size: responsive 2.3rem 2.8rem;
+
+          @include breakpoint($laptop) {
+            font-size: 2.4rem;
+          }
+
+          @include breakpoint($desktop) {
+            font-size: responsive 2.3rem 2.8rem;
+          }
+        }
+
+        a {
+          color: $primary-blue;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+
+          li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+
+            span {
+              width: 6rem;
+              display: inline-block;
+              text-align: left;
+
+              @include breakpoint($laptop) {
+                width: 8rem;
+              }
+            }
+          }
+        }
+
+        @include breakpoint($laptop) {
+          &:first-child {
+            padding-left: 0;
+
+            img {
+              max-width: 12rem;
+            }
+          }
+
+          &:last-child {
+            padding-right: 0;
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bar {
+    background-color: $dark-green;
+    padding: 1.5rem 3rem;
+
+    @include breakpoint($laptop) {
+      height: 5rem;
+      padding: 1.5rem 0;
+    }
+
+    .container {
+      font-size: 1.4rem;
+      color: $white;
+      text-align: center;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+.social-icons {
+  a {
+    display: inline-block;
+    margin-right: 2rem;
+    transition: opacity 0.4s ease;
+
+    img {
+      width: 3.2rem;
+      display: block;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

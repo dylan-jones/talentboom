@@ -1,0 +1,259 @@
+.intro-section {
+  .content.candidates-content {
+    color: $white;
+    font-size: responsive 2.2rem 3.2rem;
+    max-width: 90rem;
+  }
+}
+
+.large-boxes {
+  padding: 6rem 2rem;
+  background-color: $white;
+
+  @include breakpoint($tablet) {
+    padding: 12rem 0;
+  }
+
+  .intro-copy {
+    padding-bottom: 6rem;
+    font-size: responsive 2.2rem 3.2rem;
+    color: $primary-blue;
+
+    @include breakpoint($tablet) {
+      padding-bottom: 12rem 0;
+    }
+  }
+
+  .box-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .box {
+      width: 100%;
+      height: 27rem;
+      margin-bottom: 3rem;
+      background-color: $background-grey;
+      color: $dark-green;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      border-radius: 1rem;
+      text-align: center;
+      cursor: pointer;
+      border: 2px solid #ECECEC;
+      order: 1;
+
+      &:nth-child(n+7) {
+        order: 3;
+      }
+
+      @include breakpoint($laptop) {
+        width: 32%;
+      }
+
+      .content {
+        overflow: hidden;
+        max-height: 0;
+        font-size: 1.8rem;
+        margin: 2rem 2rem 0;
+        transition: max-height 0.4s ease;
+      }
+
+      .title {
+        border-color: $dark-green;
+      }
+
+      .title-two {
+
+      }
+
+      &-box-one {
+
+      }
+
+      &.is-active {
+        background-color: $dark-green;
+        color: $white;
+        border: 2px solid $dark-green;
+
+        .content {
+          max-height: 20rem;
+        }
+
+        .title {
+          border-color: $white;
+        }
+      }
+    }
+  }
+
+  .big-box {
+    background-color: $lumo-green;
+    color: $white;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    display: flex;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    order: 2;
+
+    &:nth-child(n+7) {
+      order: 4;
+    }
+
+    &.is-active {
+      max-height: 90rem;
+      margin-bottom: 1.5rem;
+      opacity: 1;
+      padding: 2rem;
+    }
+
+    ul {
+      width: 100%;
+      margin: 0;
+
+      @include breakpoint($laptop) {
+        width: 32%;
+      }
+
+      li {
+        font-size: responsive 1.6rem 2.2rem;
+        line-height: responsive 2.2rem 2.9rem;
+      }
+    }
+  }
+}
+
+// Box styles
+
+.large-boxes .box-info  {
+  .box[data-tab="BoxLeadership"] {
+    .title {
+      text-transform: uppercase;
+      font-size: 6.7rem;
+      font-family: "futura-pt-condensed";
+      font-weight: $bold;
+      text-decoration: underline;
+    }
+  }
+  .box[data-tab="BoxCreativeDesign"] {
+    .title {
+      text-transform: uppercase;
+      font-size: 2.8rem;
+      font-family: "futura-pt-condensed";
+      border-bottom: 2px dashed;
+      padding: 0 0 0.5rem 0;
+      margin: 0 0 0.5rem 0;
+      height: 4rem;
+    }
+
+    .title-two {
+      font-weight: $bold;
+      font-size: 5.7rem;
+      font-family: "futura-pt-condensed";
+      height: 5rem;
+      text-transform: uppercase;
+    }
+  }
+  .box[data-tab="BoxAccountProject"] {
+    .title {
+      text-transform: uppercase;
+      font-size: 2.7rem;
+      font-style: italic;
+      border-bottom: 2px dashed;
+      padding: 0 0 0.5rem 0;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .title-two {
+      font-weight: 900;
+      font-size: 3.7rem;
+      text-transform: uppercase;
+      line-height: 3.1rem;
+
+      span {
+        font-weight: 700;
+        font-size: 3.1rem;
+        display: block;
+      }
+    }
+  }
+  .box[data-tab="BoxInteractive"] {
+    .title {
+      text-transform: uppercase;
+      font-size: 4.2rem;
+      font-style: italic;
+      padding: 0 0 0.5rem 0;
+      margin: 0 0 0.5rem 0;
+      font-weight: $bold;
+      position: relative;
+      line-height: 4rem;
+
+      span {
+        font-weight: $regular;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        width: 15rem;
+        border-bottom: 2px dashed;
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+
+      &:after {
+        top: initial;
+        bottom: -1rem;
+      }
+    }
+  }
+  .box[data-tab="BoxFintech"] {
+    .title {
+      font-size: 4.7rem;
+      font-family: "cortado";
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 15rem;
+        border-bottom: 2px dashed;
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+    }
+    .title-two {
+      font-size: 5.2rem;
+      margin-top: 1.5rem;
+      font-family: "futura-pt-condensed";
+    }
+  }
+  .box[data-tab="BoxSports"] {
+    .title {
+      font-weight: bold;
+      position: relative;
+      font-size: 5.1rem;
+
+      &:after {
+        content: '';
+        width: 15rem;
+        border-bottom: 2px dashed;
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+    }
+  }
+}

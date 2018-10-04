@@ -1,0 +1,249 @@
+.contact-us {
+  background-color: $white;
+
+  .intro-section .content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .form-tabs {
+    padding: 4rem 0 6rem;
+    position: relative;
+    min-height: 35rem;
+
+    @include breakpoint($laptop) {
+      padding: 6rem 0 12rem;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin: 0 0 5rem;
+      padding: 0;
+      list-style: none;
+
+      @include breakpoint($laptop) {
+        flex-direction: row;
+      }
+
+      li {
+        display: inline-block;
+        font-size: responsive 2.4rem 4.8rem;
+        color: $white;
+        text-align: center;
+        padding: 0.6rem 5rem;
+        margin: 0 3rem;
+        background-color: #93C1B3;
+        font-family: "cortado";
+        border-radius: 4rem;
+        box-shadow: 0 3px 10px rgba(#00040D, 0.16);
+        transition: all 0.4s ease;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+
+        @include breakpoint($laptop) {
+          width: 48%;
+          margin-bottom: 0;
+          padding: 0.6rem 6rem;
+        }
+
+        &.is-active,
+        &:hover {
+          box-shadow: 0 6px 20px rgba(#00040D, 0.33);
+          background-color: $light-green;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    background-color: $dark-green;
+    padding: 2rem;
+    border-radius: 2.5rem;
+    display: none;
+    margin: 0 2rem;
+
+    @include breakpoint($laptop) {
+      padding: 5rem 5rem 2rem;
+    }
+
+    .row {
+      margin-bottom: 3rem;
+      position: relative;
+
+      .ajax-loader {
+        @include breakpoint($laptop) {
+          position: absolute;
+          right: 140px;
+          top: 30px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    input[type="submit"] {
+      @include breakpoint($laptop) {
+        position: absolute;
+        right: 0;
+        top: 1.5rem;
+      }
+    }
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.select-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 22rem;
+  margin: 0 auto;
+  width: 62rem;
+  transition: opacity 0.4s ease;
+
+  &.hide-it {
+    opacity: 0;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    width: 11rem;
+    height: 13rem;
+    display: block;
+    position: absolute;
+    top: -8rem;
+    background: {
+      image: url(../img/contact-arrow.svg);
+      repeat: no-repeat;
+      position: center center;
+      size: contain;
+    }
+  }
+
+  &:before {
+    left: 0;
+    transform: scaleX(-1);
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  .text {
+    text-align: center;
+
+    .title {
+      width: 100%;
+      font-family: "cortado";
+      font-size: responsive 4.8rem 6.8rem;
+      color: $light-green;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: responsive 1.8rem 2.8rem;
+      margin: 0;
+    }
+  }
+}
+
+.connections-boxes {
+  padding: 6rem 2rem;
+
+  @include breakpoint($laptop) {
+    padding: 12rem 2rem;
+  }
+
+  .container {
+    max-width: 85rem;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 2.5rem;
+        border: 4px solid $light-green;
+        padding: 1.5rem 3rem;
+        margin-bottom: 6.5rem;
+
+        @include breakpoint($laptop) {
+          width: 46%;
+        }
+
+        .title {
+          width: 100%;
+          text-align: center;
+          font-family: "cortado";
+          font-size: responsive 4.8rem 6.8rem;
+          color: $light-green;
+          margin-bottom: 1.5rem;
+        }
+
+        .content {
+          margin: 0 auto;
+
+          span {
+            display: block;
+            width: 100%;
+            position: relative;
+            padding-left: 5rem;
+            margin-bottom: 1rem;
+
+            &:before {
+              content: '';
+              width: 3rem;
+              height: 3rem;
+              display: inline-block;
+              position: absolute;
+              left: 0;
+              top: 0;
+              background: {
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+              }
+            }
+
+            &.tel {
+              &:before {
+                background-image: url('../img/icon-tel.svg');
+              }
+            }
+
+            &.email {
+              &:before {
+                background-image: url('../img/icon-mail.svg');
+              }
+            }
+
+            &.address {
+              &:before {
+                background-image: url('../img/icon-location.svg');
+              }
+            }
+
+            a {
+              color: $primary-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

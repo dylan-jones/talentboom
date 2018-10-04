@@ -1,0 +1,28 @@
+// Modules and Variables
+@import "modules/variables";
+@import '~breakpoint-sass/stylesheets/breakpoint';
+@import "partials/base";
+
+// Partials
+@import "partials/fonts";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/buttons";
+@import "partials/slider";
+@import "partials/fields";
+@import "partials/ajaxsearch";
+@import "partials/animations";
+
+// Pages
+@import "pages/home";
+@import "pages/ourconnections";
+@import "pages/candidates";
+@import "pages/ourtalent";
+@import "pages/blog";
+@import "pages/contact-us";
+@import "pages/ourclients";
+
+// Third-party
+@import "vendors/wpcore";
+@import '~animate.css/animate';
+@import "~hamburgers/_sass/hamburgers/hamburgers.scss";

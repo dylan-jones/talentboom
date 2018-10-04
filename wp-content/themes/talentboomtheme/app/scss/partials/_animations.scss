@@ -1,0 +1,36 @@
+.matches-svg {
+  #flame {
+    animation: rubberBand 5s ease infinite;
+    transform-origin: center right;
+  }
+
+  #line_right_top {
+    animation: flash 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  #line_right_middle {
+    animation: flash 2s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  #line_right_bottom {
+    animation: flash 2s ease-in-out infinite;
+    animation-delay: 1.8s;
+  }
+
+  #line_left_top {
+    animation: flash 2s ease-in-out infinite;
+    animation-delay: 1.4s;
+  }
+
+  #line_left_middle {
+    animation: flash 2s ease-in-out infinite;
+    animation-delay: 3.2s;
+  }
+
+  #line_left_bottom {
+    animation: flash 2s ease-in-out infinite;
+    animation-delay: 0.4s;
+  }
+}

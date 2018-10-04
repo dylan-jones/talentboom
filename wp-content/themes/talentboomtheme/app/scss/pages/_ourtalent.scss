@@ -1,0 +1,22 @@
+.our-talent {
+  .intro-section {
+    .image {
+      transform: translate(0,0);
+      margin: -60% -4rem 2rem;
+
+      @include breakpoint($tablet) {
+        transform: translate(75rem,-20rem);
+        margin: 0;
+      }
+    }
+
+    .content {
+      font-size: responsive 2.2rem 3.2rem;
+      max-width: 82rem;
+    }
+  }
+
+  .about-content h2 {
+    font-size: responsive 3.2rem 6.8rem;
+  }
+}

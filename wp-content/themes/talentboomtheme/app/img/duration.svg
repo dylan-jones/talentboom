@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.5 29.5">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-width: 4px;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Duration" transform="translate(-571.5 -1118.5)">
+    <g id="Ellipse_3" data-name="Ellipse 3" class="cls-1" transform="translate(571.5 1118.5)">
+      <circle class="cls-3" cx="14.75" cy="14.75" r="14.75"/>
+      <circle class="cls-4" cx="14.75" cy="14.75" r="12.75"/>
+    </g>
+    <line id="Line_4" data-name="Line 4" class="cls-2" y1="7.809" transform="translate(586.684 1125.875)"/>
+    <line id="Line_5" data-name="Line 5" class="cls-2" x2="5.206" transform="translate(586.579 1133.578) rotate(45)"/>
+  </g>
+</svg>

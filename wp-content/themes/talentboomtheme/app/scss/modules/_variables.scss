@@ -1,0 +1,52 @@
+/* VARIABLES */
+
+// Colors
+$white: #ffffff !default;
+$black: #000000 !default;
+
+$primary-blue: #58626F;
+$dark-green: #158677;
+$light-green: #32BE93;
+$lumo-green: #22E0A6;
+$background-grey: #F5F5F5;
+$border-color: #B2BAC6;
+$secondary-grey: #9AA1AA;
+
+$error: #FF0000 !default;
+$success: #008000 !default;
+$selection: #04A4CC !default;
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+$heavy: 700;
+
+// Font Sizes
+$small: 1.4rem;
+$standard: 1.6rem;
+$large: 1.8rem;
+
+// Base font
+$base-font-family: "futura-pt", arial, sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 2.2rem;
+$base-line-height: 1.4;
+
+// Media Queries
+$small: 320px !default;
+$mobile: 375px !default;
+$tablet: 768px !default;
+$laptop: 1024px !default;
+$desktop: 1440px !default;
+
+// Flexbox Grid
+$grid-columns:  12 !default;
+$grid-gutter-width: 20px !default;
+
+// Hamburger Menu
+$hamburgers-padding-x: 0px;
+$hamburgers-padding-y: 0px;
+$hamburger-layer-width: 3.6rem;
+$hamburger-types: (collapse);
+$hamburger-layer-color: $light-green;

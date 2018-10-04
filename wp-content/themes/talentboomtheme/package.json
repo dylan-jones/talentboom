@@ -1,0 +1,50 @@
+{
+  "name": "talentboomtheme",
+  "version": "1.0.0",
+  "description": "Powerful shell for rapidly deploying your WordPress projects.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.0.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "lost": "^8.3.0",
+    "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.6",
+    "rucksack-css": "^1.0.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "breakpoint-sass": "^2.7.1",
+    "bxslider": "^4.2.14",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
+    "svg-pan-zoom": "github:ariutta/svg-pan-zoom"
+  }
+}

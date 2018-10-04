@@ -1,0 +1,75 @@
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  color: $primary-blue;
+  padding: 1rem 2rem;
+  font-size: responsive 1.8rem 2.8rem;
+  border: 0;
+  box-shadow: 0 10px 12px rgba($black, 0.08);
+  border-radius: 0.5rem;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+
+  &::placeholder {
+    color: rgba($primary-blue, 0.5);
+  }
+
+  &:focus {
+    box-shadow: 0 10px 12px rgba($black, 0.2);
+  }
+
+  @include breakpoint($laptop) {
+    padding: 2rem 3rem;
+  }
+}
+
+textarea {
+  height: 18rem;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+  border: none;
+  transition: background 0.2s ease;
+  background-color: $lumo-green;
+  color: $white;
+  font-size: responsive 1.8rem 2.8rem;
+  font-weight: $regular;
+  box-shadow: 0 10px 12px rgba($black, 0.08);
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: $lumo-green;
+    box-shadow: 0 10px 12px rgba($black, 0.2);
+  }
+}
+
+.file-uploader {
+
+  label {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    transition: background 0.2s ease;
+    background-color: $lumo-green;
+    color: $white;
+    font-size: responsive 1.8rem 2.8rem;
+    font-weight: $regular;
+    box-shadow: 0 10px 12px rgba($black, 0.08);
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lumo-green;
+      box-shadow: 0 10px 12px rgba($black, 0.2);
+    }
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+}

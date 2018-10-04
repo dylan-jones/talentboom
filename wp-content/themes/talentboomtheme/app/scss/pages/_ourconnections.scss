@@ -1,0 +1,219 @@
+.intro-section {
+  padding: 9rem 0 6rem;
+  background-color: $light-green;
+
+  @include breakpoint($tablet) {
+    padding: 18rem 0 12rem;
+  }
+
+  h1 {
+    font-family: "cortado";
+    font-size: responsive 5rem 9rem;
+    margin: 0;
+    color: $dark-green;
+  }
+
+  p {
+    color: $white;
+  }
+
+  .content {
+    max-width: 89rem;
+  }
+
+  .container {
+    padding: 0 3rem;
+
+    @include breakpoint($tablet) {
+      padding: 0 2rem;
+    }
+  }
+
+  .image {
+    position: relative;
+    width: calc(100% + 8rem);
+    margin: -60% 9rem 2rem;
+
+    @include breakpoint($tablet) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(60%,-50%);
+      width: 130rem;
+      margin: 0 auto;
+    }
+  }
+
+  &.white-background {
+    background-color: $white;
+    padding: 6rem 0;
+
+    @include breakpoint($tablet) {
+      padding: 12rem 0 12rem;
+    }
+
+    p {
+      color: $primary-blue;
+    }
+  }
+}
+
+.about-content {
+  padding: 6rem 0;
+  background-color: $white;
+
+  @include breakpoint($tablet) {
+    padding: 12rem 0;
+  }
+
+  h2 {
+    font-family: "cortado";
+    font-size: responsive 4.3rem 6.8rem;
+    margin: 0 0 6rem 0; 
+    color: $light-green;
+  }
+
+  p {
+    line-height: responsive 1.8rem 3rem;
+    font-size: responsive 1.6rem 2.2rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint($tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .container {
+    margin-bottom: 6rem;
+    padding: 0 3rem;
+
+    @include breakpoint($tablet) {
+      padding: 0 2rem;
+    }
+  }
+
+  &.dark-background {
+    background-color: $background-grey;
+
+    .container {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 2rem;
+      font-size: responsive 1.6rem 2.2rem;
+      list-style: none;
+      padding-left: 3rem;
+      position: relative;
+      
+      &:before {
+        content: '•';
+        color: $light-green;
+        position: relative;
+        left: 0;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.connections-map {
+  background-color: $white;
+  padding: 6rem 3rem;
+
+  .container {
+    position: relative;
+  }
+
+  @include breakpoint($tablet) {
+    padding: 6rem;
+  }
+
+  .tabs {
+    margin: 0 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include breakpoint($tablet) {
+      padding: 6rem;
+      flex-wrap: nowrap;
+    }
+
+    li {
+      list-style: none;
+      padding: 0 2rem;
+      display: inline-block;
+
+      a {
+        font-size: resposinve 1.8rem 3.2rem;
+        font-weight: $bold;
+      }
+    }
+  }
+
+  .map {
+    width: 30rem;
+    margin: 0 auto;
+
+    @include breakpoint($tablet) {
+      width: 70rem;
+    }
+
+    @include breakpoint($laptop) {
+      width: 100rem;
+    }
+
+    @include breakpoint($desktop) {
+      width: 120rem;
+    }
+  }
+}
+
+.pin {
+  &-locations {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  width: 2.7rem;
+  height: 3.3rem;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  background: {
+    image: url(../img/pin.svg);
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+
+  &-africa {
+    left: 53rem;
+    top: 49rem;
+  }
+
+  &-europe {
+    left: 50rem;
+    top: 20rem;
+  }
+
+  &-asia {
+    left: 82rem;
+    top: 32rem;
+  }
+
+  &-usa {
+    left: 21rem;
+    top: 28rem;
+  }
+}

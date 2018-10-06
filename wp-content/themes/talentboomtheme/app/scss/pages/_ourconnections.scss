@@ -1,8 +1,8 @@
 .intro-section {
-  padding: 9rem 0 6rem;
+  padding: 13rem 0 6rem;
   background-color: $light-green;
 
-  @include breakpoint($tablet) {
+  @include breakpoint($laptop) {
     padding: 18rem 0 12rem;
   }
 
@@ -18,7 +18,13 @@
   }
 
   .content {
-    max-width: 89rem;
+    @include breakpoint($tablet) {
+      padding-right: 19rem;
+    }
+
+    @include breakpoint($laptop) {
+      padding-right: 31rem;
+    }
   }
 
   .container {
@@ -30,17 +36,27 @@
   }
 
   .image {
+    margin: -26rem -5rem 2rem;
     position: relative;
-    width: calc(100% + 8rem);
-    margin: -60% 9rem 2rem;
+    width: calc(100% + 20rem);
 
     @include breakpoint($tablet) {
       position: absolute;
       top: 0;
       right: 0;
-      transform: translate(60%,-50%);
-      width: 130rem;
+      transform: translate(78rem,-33rem);
+      width: 113rem;
       margin: 0 auto;
+    }
+
+    @include breakpoint($laptop) {
+      transform: translate(78rem,-39rem);
+      width: 113rem;
+    }
+
+    @include breakpoint($desktop) {
+      transform: translate(92rem,-39rem);
+      width: 134rem;
     }
   }
 
@@ -48,7 +64,7 @@
     background-color: $white;
     padding: 6rem 0;
 
-    @include breakpoint($tablet) {
+    @include breakpoint($laptop) {
       padding: 12rem 0 12rem;
     }
 
@@ -62,7 +78,7 @@
   padding: 6rem 0;
   background-color: $white;
 
-  @include breakpoint($tablet) {
+  @include breakpoint($laptop) {
     padding: 12rem 0;
   }
 

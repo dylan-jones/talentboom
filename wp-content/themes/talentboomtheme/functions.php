@@ -500,4 +500,40 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+/*------------------------------------*\
+    Social Share
+\*------------------------------------*/
+
+function add_share_buttons_after_content( $content ) {
+
+    global $post;
+
+    // Get the post's URL that will be shared
+    $post_url   = urlencode( esc_url( get_permalink($post->ID) ) );
+    
+    // Get the post's title
+    $post_title = urlencode( $post->post_title );
+
+    // Compose the share links for Facebook, Twitter and Google+
+    $facebook_link    = sprintf( 'https://www.facebook.com/sharer/sharer.php?u=%1$s', $post_url );
+    $twitter_link     = sprintf( 'https://twitter.com/intent/tweet?text=%2$s&url=%1$s', $post_url, $post_title );
+    $linkedin_link = sprintf( 'https://www.linkedin.com/shareArticle?mini=true&url=%1$s', $post_url );
+
+    // Wrap the buttons
+    $output = '<div id="share-buttons" class="social-icons"><span>Share this post</span>';
+    
+        // Add the links inside the wrapper
+        $output .= '<a target="_blank" href="' . $facebook_link . '" class="share-button facebook"><img src="../wp-content/themes/talentboomtheme/app/img/icon-facebook.svg" alt=""></a>';
+        $output .= '<a target="_blank" href="' . $twitter_link . '" class="share-button twitter"><img src="../wp-content/themes/talentboomtheme/app/img/icon-twitter.svg" alt=""></a>';
+        $output .= '<a target="_blank" href="' . $linkedin_link . '" class="share-button linked-in"><img src="../wp-content/themes/talentboomtheme/app/img/icon-linkedin.svg" alt=""></a>';
+        
+    $output .= '</div>';
+
+    // Return the buttons and the original content
+    return $output . $content;
+
+}
+add_filter( 'the_content', 'add_share_buttons_after_content' );
+
+
 ?>

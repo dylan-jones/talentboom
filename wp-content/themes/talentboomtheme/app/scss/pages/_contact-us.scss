@@ -4,12 +4,16 @@
   .intro-section .content {
     text-align: center;
     margin: 0 auto;
+    padding: 0;
   }
 
   .form-tabs {
     padding: 4rem 0 6rem;
     position: relative;
-    min-height: 35rem;
+
+    @include breakpoint($tablet) {
+      min-height: 35rem;
+    }
 
     @include breakpoint($laptop) {
       padding: 6rem 0 12rem;
@@ -46,6 +50,7 @@
           width: 48%;
           margin-bottom: 0;
           padding: 0.6rem 6rem;
+          font-size: 4rem;
         }
 
         &.is-active,
@@ -103,10 +108,18 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 22rem;
+  top: 18rem;
   margin: 0 auto;
-  width: 62rem;
+  width: 100%;
   transition: opacity 0.4s ease;
+
+  @include breakpoint($tablet) {
+    top: 22rem;
+  }
+
+  @include breakpoint($laptop) {
+    width: 62rem;
+  }
 
   &.hide-it {
     opacity: 0;
@@ -117,14 +130,18 @@
     content: '';
     width: 11rem;
     height: 13rem;
-    display: block;
     position: absolute;
     top: -8rem;
+    display: none;
     background: {
       image: url(../img/contact-arrow.svg);
       repeat: no-repeat;
       position: center center;
       size: contain;
+    }
+
+    @include breakpoint($laptop) {
+      display: block;
     }
   }
 
@@ -160,7 +177,7 @@
   padding: 6rem 2rem;
 
   @include breakpoint($laptop) {
-    padding: 12rem 2rem;
+    padding: 6rem 2rem 12rem;
   }
 
   .container {
@@ -181,8 +198,9 @@
         border: 4px solid $light-green;
         padding: 1.5rem 3rem;
         margin-bottom: 6.5rem;
+        width: 100%;
 
-        @include breakpoint($laptop) {
+        @include breakpoint($tablet) {
           width: 46%;
         }
 

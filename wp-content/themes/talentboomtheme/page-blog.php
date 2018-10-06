@@ -36,7 +36,8 @@
             $args = array(
               'post_type' => 'post',
               'offset' => 2,
-              'posts_per_page'=> 6
+              'posts_per_page'=> 3,
+              'paged' => $paged
             );
             $the_query = new WP_Query( $args ); ?>
             <?php if ( $the_query->have_posts() ) : ?>
@@ -53,13 +54,30 @@
                 </article>
               <?php endwhile; ?>
 
+              <div class="pagination">
+                <?php 
+                  echo paginate_links( array(
+                      'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+                      'total'        => $the_query->max_num_pages,
+                      'current'      => max( 1, get_query_var( 'paged' ) ),
+                      'format'       => '?paged=%#%',
+                      'show_all'     => false,
+                      'type'         => 'plain',
+                      'end_size'     => 2,
+                      'mid_size'     => 1,
+                      'prev_next'    => true,
+                      'prev_text'    => sprintf( '<i></i> %1$s', __( 'Newer') ),
+                      'next_text'    => sprintf( '%1$s <i></i>', __( 'Older') ),
+                      'add_args'     => false,
+                      'add_fragment' => '',
+                  ) );
+                ?>
+              </div>
+
               <?php wp_reset_postdata(); ?>
               <?php else : ?>
                 <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
               <?php endif; ?>
-        </div>
-        <div class="pagination">
-          <a href="#" class="page-left">Older</a><span></span><a href="#" class="page-right">Newer</a>
         </div>
       </div>
     </section>

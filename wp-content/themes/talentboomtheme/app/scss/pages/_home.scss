@@ -95,6 +95,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
+    cursor: pointer;
 
     h3 {
       text-transform: uppercase;
@@ -102,7 +103,7 @@
       margin: 0;
 
       span {
-        text-transform: normal;
+        text-transform: none;
         font-size: responsive 5.5rem 9rem;
         font-family: "cortado";
         display: block;
@@ -113,6 +114,7 @@
       display: none;
       padding: 0 2rem;
       width: 100%;
+      font-size: responsive 1.6rem 2rem;
 
       a {
         color: $white;
@@ -131,6 +133,10 @@
 
     &:last-child {
       background-color: $dark-green;
+
+      &.active {
+        background-image: url('../img/pattern-light.png');
+      }
     }
 
     @include breakpoint($laptop) {
@@ -157,7 +163,7 @@
     padding: 0 3rem;
 
     @include breakpoint($tablet) {
-      padding: 0;
+      padding: 0 2rem;
     }
 
     h3 {
@@ -197,7 +203,7 @@
     padding: 0 3rem;
 
     @include breakpoint($tablet) {
-      padding: 0;
+      padding: 0 2rem;
     }
 
     .content {

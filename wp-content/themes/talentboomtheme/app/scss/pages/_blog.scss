@@ -157,13 +157,23 @@
   width: 100%;
   text-align: center;
   position: relative;
+  flex-direction: column;
+
+  @include breakpoint($tablet) {
+    flex-direction: row;
+  }
 
   span {
     content: '';
     width: 1px;
-    height: 3.2rem;
+    height: 1.4rem;
     background-color: $primary-blue;
     display: inline-block;
+    text-indent: 999px;
+
+    @include breakpoint($tablet) {
+      height: 3.2rem;
+    }
   }
 
   a {
@@ -172,6 +182,15 @@
     color: $primary-blue;
     transition: opacity 0.2s ease;
     margin: 0 1.5rem;
+
+    &.page-numbers {
+      display: none;
+    }
+
+    &.next,
+    &.prev {
+      display: inline-block;
+    }
 
     &:hover {
       opacity: 0.8;
@@ -221,7 +240,10 @@
     .social-icons {
       display: flex;
       align-items: center;
-      margin: 2rem 0 4rem;
+      margin: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
 
       span {
         color: $secondary-grey;
@@ -288,6 +310,9 @@
       margin-top: 1rem;
       font-size: responsive 1.8rem 2.2rem;
       line-height: responsive 2.4rem 3rem;
+      position: relative; 
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
 
       @include breakpoint($tablet) {
         margin-top: 3rem;
@@ -329,6 +354,7 @@
 
       @include breakpoint($tablet) {
         max-width: 29rem;
+        width: 33%;
       }
 
       div {

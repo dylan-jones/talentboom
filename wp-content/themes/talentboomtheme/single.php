@@ -42,16 +42,14 @@
 
 				<?php endif; ?>
 
-				<div class="social-icons">
-					<span>Share this post</span>
-					<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/app/img/icon-facebook.svg" alt=""></a>
-					<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/app/img/icon-twitter.svg" alt=""></a>
-					<a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/app/img/icon-linkedin.svg" alt=""></a>
-				</div>
-
+				<?php add_share_buttons_after_content(); ?>
 
 				<div class="pagination">
-          <a href="#" class="page-left">Previous Post</a><span></span><a href="#">All Posts</a><span></span><a href="#" class="page-right">Next Post</a>
+					<?php previous_post_link('%link','Previous Post'); ?>
+						<span></span>
+					<a href="<?php echo home_url(); ?>/blog">All Posts</a>
+						<span></span>
+					<?php next_post_link('%link','Next Post'); ?>
         </div>
 
       </div>

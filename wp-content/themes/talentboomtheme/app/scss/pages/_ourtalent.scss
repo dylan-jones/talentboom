@@ -5,14 +5,41 @@
       margin: -60% -4rem 2rem;
 
       @include breakpoint($tablet) {
-        transform: translate(75rem,-20rem);
-        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(80rem,-44rem);
+        width: 113rem;
+        margin: 0 auto;
+      }
+
+      @include breakpoint($laptop) {
+        width: 113rem;
+      }
+
+      @include breakpoint($desktop) {
+        width: 134rem;
       }
     }
 
     .content {
       font-size: responsive 2.2rem 3.2rem;
-      max-width: 82rem;
+      
+      @include breakpoint($tablet) {
+        padding-right: 31rem;
+      }
+
+      @include breakpoint($laptop) {
+        padding-right: 31rem;
+      }
+
+      @include breakpoint($desktop) {
+        padding-right: 31rem;
+      }
+
+      &.candidates-content {
+        padding-right: 0;
+      }
     }
   }
 

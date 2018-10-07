@@ -551,20 +551,20 @@ function tb_job_search(){
  
     $meta_query = array('relation' => 'AND');
  
-    if(isset($_GET['jobduration'])) {
-        $jobduration = sanitize_text_field( $_GET['jobduration'] );
+    if(isset($_GET['duration'])) {
+        $duration = sanitize_text_field( $_GET['duration'] );
         $meta_query[] = array(
-            'key' => 'jobduration',
-            'value' => $jobduration,
+            'key' => 'duration',
+            'value' => $duration,
             'compare' => '='
         );
     }
  
-    if(isset($_GET['joblocation'])) {
-        $joblocation = sanitize_text_field( $_GET['joblocation'] );
+    if(isset($_GET['location'])) {
+        $location = sanitize_text_field( $_GET['location'] );
         $meta_query[] = array(
-            'key' => 'joblocation',
-            'value' => $joblocation,
+            'key' => 'location',
+            'value' => $location,
             'compare' => '='
         );
     }
@@ -575,12 +575,12 @@ function tb_job_search(){
         'meta_query' => $meta_query
     );
  
-    if(isset($_GET['jobtitle'])) {
-        $jobtitle = sanitize_text_field( $_GET['jobtitle'] );
+    if(isset($_GET['title'])) {
+        $title = sanitize_text_field( $_GET['title'] );
         $search_query = new WP_Query( array(
             'post_type' => 'job',
             'posts_per_page' => -1,
-            's' => $jobtitle
+            's' => $title
         ) );
     } else {
         $search_query = new WP_Query( $args );

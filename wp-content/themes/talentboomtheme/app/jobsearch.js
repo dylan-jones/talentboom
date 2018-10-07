@@ -26,9 +26,9 @@ $(document).ready(function(){
             url: "./wp-admin/admin-ajax.php",
             data: {
                 action: 'tb_job_search', 
-                jobduration : jobduration,
-                joblocation : joblocation,
-                jobtitle : jobtitle
+                duration : jobduration,
+                location : joblocation,
+                title : jobtitle
             },
             beforeSend:function(response){
                 $('.form-results').addClass('in-progress');
@@ -37,7 +37,7 @@ $(document).ready(function(){
                 jobform.find("#results").empty();
                 if(response) {
                     for(var i = 0 ;  i < response.length ; i++) {
-                         var html  = "<div id='poste-" + response[i].id + "' class='result-box'>";
+                         var html  = "<div id='post-" + response[i].id + "' class='result-box'>";
                              html += "  <h4>" + response[i].title + "</h4>";
                              html += "  <div class='company-name'>" + response[i].companyname + "</div>";
                              html += "  <div class='location'>" + response[i].location + "</div>";

@@ -124,14 +124,6 @@
     $params[$o->getName()] = $o->getData();
     ?>
 </div>
-<div class="item"><?php
-    $o = new wpdreamsTextSmall("i_rows", __('Rows count', 'ajax-search-pro'), $sd['i_rows']);
-    $params[$o->getName()] = $o->getData();
-    ?>
-    <p class="descMsg">
-        <?php echo __('If the item would exceed the row limit, it gets placed to a new page.', 'ajax-search-pro'); ?>
-    </p>
-</div>
 <div class="item">
     <?php
     $option_name = "i_res_container_padding";

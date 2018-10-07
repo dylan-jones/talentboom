@@ -134,6 +134,11 @@ function html5blank_conditional_scripts()
         wp_register_script('mapscript', get_template_directory_uri() . '/dist/mapscript.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('mapscript'); // Enqueue it!
     }
+
+    if (is_page('home')) {
+        wp_register_script('jobscript', get_template_directory_uri() . '/dist/jobsearch.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('jobscript'); // Enqueue it!
+    }
 }
 
 // Load HTML5 Blank styles
@@ -534,6 +539,77 @@ function add_share_buttons_after_content( $content ) {
 
 }
 add_filter( 'the_content', 'add_share_buttons_after_content' );
+
+/*------------------------------------*\
+    Custom Search
+\*------------------------------------*/
+
+add_action('wp_ajax_nopriv_tb_job_search', 'tb_job_search');
+add_action('wp_ajax_tb_job_search', 'tb_job_search');
+function tb_job_search(){
+  header("Content-Type: application/json"); 
+ 
+    $meta_query = array('relation' => 'AND');
+ 
+    if(isset($_GET['jobduration'])) {
+        $jobduration = sanitize_text_field( $_GET['jobduration'] );
+        $meta_query[] = array(
+            'key' => 'jobduration',
+            'value' => $jobduration,
+            'compare' => '='
+        );
+    }
+ 
+    if(isset($_GET['joblocation'])) {
+        $joblocation = sanitize_text_field( $_GET['joblocation'] );
+        $meta_query[] = array(
+            'key' => 'joblocation',
+            'value' => $joblocation,
+            'compare' => '='
+        );
+    }
+
+    $args = array(
+        'post_type' => 'job',
+        'posts_per_page' => -1,
+        'meta_query' => $meta_query
+    );
+ 
+    if(isset($_GET['jobtitle'])) {
+        $jobtitle = sanitize_text_field( $_GET['jobtitle'] );
+        $search_query = new WP_Query( array(
+            'post_type' => 'job',
+            'posts_per_page' => -1,
+            's' => $jobtitle
+        ) );
+    } else {
+        $search_query = new WP_Query( $args );
+    }
+ 
+    if ( $search_query->have_posts() ) {
+ 
+        $result = array();
+ 
+        while ( $search_query->have_posts() ) {
+            $search_query->the_post();
+
+            $result[] = array(
+                "id" => get_the_ID(),
+                "title" => get_the_title(),
+                "companyname" => get_field('company_name'),
+                "location" => get_field('location'),
+                "enquire" => get_field('enquire')
+            );
+        }
+        wp_reset_query();
+ 
+        echo json_encode($result);
+ 
+    } else {
+        // no posts found
+    }
+    wp_die();
+}
 
 
 ?>

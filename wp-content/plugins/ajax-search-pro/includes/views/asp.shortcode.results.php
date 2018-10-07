@@ -44,9 +44,14 @@ $_pagination_arrow = file_get_contents(WP_PLUGIN_DIR . '/' . $style['i_paginatio
 
     <?php if ($style['showmoreresults'] == 1): ?>
         <?php do_action('asp_layout_before_showmore', $id); ?>
-        <p class='showmore'>
-            <a class='asp_showmore'><?php echo asp_icl_t("More results text" . " ($real_id)", $style['showmoreresultstext']) . " <span></span>"; ?></a>
-        </p>
+        <div class="asp_showmore_container">
+            <p class='showmore'>
+                <a class='asp_showmore'><?php echo asp_icl_t("More results text" . " ($real_id)", $style['showmoreresultstext']) . " <span></span>"; ?></a>
+            </p>
+            <div class="asp_moreres_loader" style="display: none;">
+                <div class="asp_moreres_loader-inner"></div>
+            </div>
+        </div>
         <?php do_action('asp_layout_after_showmore', $id); ?>
     <?php endif; ?>
 

@@ -123,6 +123,18 @@ jQuery(function($){
     });
     // --------------------------------
 
+    // --------------- Navigate to a tab on specific links -----------------
+    $(".item a.asp_to_tab").on("click", function(){
+        var tabid = $(this).attr("tabid");
+        $('.tabs a[tabid=' + Math.floor( tabid / 100 ) + ']').click();
+        $('.tabs a[tabid=' + tabid + ']').click();
+        if ( typeof $(this).data('asp-os-highlight') !== 'undefined' ) {
+            $('.asp-os-highlighted').removeClass("asp-os-highlighted");
+            $("*[name='"+$(this).data('asp-os-highlight')+"']").closest('.item').addClass("asp-os-highlighted");
+        }
+    });
+    // ----------------------------------------------------------------------
+
     //var ajaxurl = '<?php bloginfo("url"); ?>' + "/wp-content/plugins/ajax-search-pro/ajax_search.php";
     $('.tabs a[tabid=6]').click(function () {
         $('.tabs a[tabid=601]').click();
@@ -586,6 +598,16 @@ jQuery(function($){
     $('input[name="use_post_type_order"]').change();
 
     // ---------------------- Load more and highlighter ------------------------
+    function showHideInfinite() {
+        if (
+            $("input[name='showmoreresults']").val() == 1 &&
+            $("select[name='more_results_action']").val() == 'ajax'
+        ) {
+            $('input[name=more_results_infinite]').closest('.item').removeClass("disabled");
+        } else {
+            $('input[name=more_results_infinite]').closest('.item').addClass("disabled");
+        }
+    }
     $("input[name='showmoreresults']").change(function(){
         if ( $(this).val() == 1 ) {
             $("select[name='more_results_action']").closest('div').removeClass("disabled");
@@ -597,6 +619,15 @@ jQuery(function($){
             $("select[name='more_redirect_location']").closest('div').addClass("hiddend");
             $("input[name='showmoreresultstext']").closest('div').addClass("hiddend");
         }
+        // Auto populate results count
+        if ( $(this).val() == 1 && $("select[name='more_results_action']").val() == 'ajax' ) {
+            $('input[name=auto_populate_count]').closest('div').addClass('disabled');
+            $('.autop-count-err').removeClass('hiddend');
+        } else {
+            $('input[name=auto_populate_count]').closest('div').removeClass('disabled');
+            $('.autop-count-err').addClass('hiddend');
+        }
+        showHideInfinite();
     });
     $("input[name='showmoreresults']").change();
 
@@ -610,6 +641,13 @@ jQuery(function($){
         } else {
             $("select[name='more_redirect_location']").closest('div').addClass("hiddend");
         }
+        // Auto populate results count
+        if ( $("input[name='showmoreresults']").val() == 1 && $(this).val() == 'ajax' ) {
+            $('input[name=auto_populate_count]').closest('div').addClass('disabled');
+        } else {
+            $('input[name=auto_populate_count]').closest('div').removeClass('disabled');
+        }
+        showHideInfinite();
     });
     $("select[name='more_results_action']").change();
 
@@ -645,6 +683,19 @@ jQuery(function($){
             $("*[name='"+$(this).data('asp-os-highlight')+"']").closest('.item').addClass("asp-os-highlighted");
         }
     });
+
+    // ---------------------------- THEME OPTIONS PANEL ---------------------------------
+    $('input[name="i_pagination"]').change(function(){
+        if ($(this).val() == 0) {
+            $('input[name="i_rows"]').closest('.wpdreamsTextSmall').addClass('disabled');
+            $('.item-iso-nav').addClass('disabled');
+        } else {
+            $('input[name="i_rows"]').closest('.wpdreamsTextSmall').removeClass('disabled');
+            $('.item-iso-nav').removeClass('disabled');
+        }
+    });
+    $('input[name="i_pagination"]').change();
+    // ---------------------------- THEME OPTIONS PANEL ---------------------------------
 
     // -------------------------- ADVANCED OPTIONS PANEL --------------------------------
     $("select[name='group_by']").change(function(){

@@ -13,6 +13,9 @@ if (!class_exists("wpdreamsTaxonomySelect")) {
      */
     class wpdreamsTaxonomySelect extends wpdreamsType {
         private $types, $selected, $otype, $v;
+        private $exclude = array(
+            'product_visibility', 'product_type'
+        );
 
         function getType() {
             parent::getType();
@@ -33,8 +36,10 @@ if (!class_exists("wpdreamsTaxonomySelect")) {
                     $custom_post_type = "";
                     if ($tax->object_type != null && $tax->object_type[0] != null)
                         $custom_post_type = $tax->object_type[0] . " - ";
+                    if ( in_array($tax->name, $this->exclude) )
+                        continue;
                     if ($this->selected == null || !wd_in_array_r($tax->name, $this->selected)) {
-                        echo '<li class="ui-state-default" taxonomy="' . $tax->name . '">' . $custom_post_type . $tax->labels->name . '</li>';
+                        echo '<li class="ui-state-default" taxonomy="' . $tax->name . '">' . $custom_post_type . $tax->labels->name . '<span class="extra_info">[' . $tax->name . ']</span></li>';
                     }
 
                 }
@@ -48,7 +53,7 @@ if (!class_exists("wpdreamsTaxonomySelect")) {
                     if (isset($tax->object_type) && $tax->object_type[0] != null)
                         $custom_post_type = $tax->object_type[0] . " - ";
                     if (isset($tax->name))
-                        echo '<li class="ui-state-default" taxonomy="' . $tax->name . '">' . $custom_post_type . $tax->labels->name . '</li>';
+                        echo '<li class="ui-state-default" taxonomy="' . $tax->name . '">' . $custom_post_type . $tax->labels->name . '<span class="extra_info">[' . $tax->name . ']</span></li>';
                 }
             }
             echo "</ul></div>";

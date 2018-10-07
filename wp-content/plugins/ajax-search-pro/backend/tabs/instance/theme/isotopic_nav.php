@@ -3,7 +3,19 @@
     <p><?php echo __('You can change that under the <a href="#402" data-asp-os-highlight="resultstype" tabid="402">Layout Options -> Results layout</a> panel,
         <br>..or choose a <a href="#601" tabid="601">different theme</a> with a different pre-defined layout.', 'ajax-search-pro'); ?></p>
 </div>
-<div class="item"><?php
+<div class="item item item-flex-nogrow" style="flex-wrap: wrap;">
+    <?php
+    $o = new wpdreamsYesNo("i_pagination", __('Display the pagination navigation?', 'ajax-search-pro'), $sd['i_pagination']);
+    $params[$o->getName()] = $o->getData();
+
+    $o = new wpdreamsTextSmall("i_rows", __('Rows count per page', 'ajax-search-pro'), $sd['i_rows']);
+    $params[$o->getName()] = $o->getData();
+    ?>
+    <p class="descMsg" style="min-width: 100%;flex-wrap: wrap;flex-basis: auto;flex-grow: 1;box-sizing: border-box;">
+        <?php echo __('If the item would exceed the row limit, it gets placed to a new page.', 'ajax-search-pro'); ?>
+    </p>
+</div>
+<div class="item item-iso-nav"><?php
     $o = new wpdreamsCustomSelect("i_pagination_position", __('Navigation position', 'ajax-search-pro'),  array(
         'selects'=>array(
             array('option' => __('Top', 'ajax-search-pro'), 'value' => 'top'),
@@ -15,12 +27,12 @@
     $params[$o->getName()] = $o->getData();
     ?>
 </div>
-<div class="item"><?php
+<div class="item item-iso-nav"><?php
     $o = new wpdreamsColorPicker("i_pagination_background", __('Pagination background', 'ajax-search-pro'), $sd['i_pagination_background']);
     $params[$o->getName()] = $o->getData();
     ?>
 </div>
-<div class="item">
+<div class="item item-iso-nav">
     <?php
     $o = new wpdreamsImageRadio("i_pagination_arrow", __('Arrow image', 'ajax-search-pro'), array(
             'images'  => array(
@@ -49,22 +61,22 @@
     $params[$o->getName()] = $o->getData();
     ?>
 </div>
-<div class="item"><?php
+<div class="item item-iso-nav"><?php
     $o = new wpdreamsColorPicker("i_pagination_arrow_background", __('Arrow background color', 'ajax-search-pro'), $sd['i_pagination_arrow_background']);
     $params[$o->getName()] = $o->getData();
     ?>
 </div>
-<div class="item"><?php
+<div class="item item-iso-nav"><?php
     $o = new wpdreamsColorPicker("i_pagination_arrow_color", __('Arrow color', 'ajax-search-pro'), $sd['i_pagination_arrow_color']);
     $params[$o->getName()] = $o->getData();
     ?>
 </div>
-<div class="item"><?php
+<div class="item item-iso-nav"><?php
     $o = new wpdreamsColorPicker("i_pagination_page_background", __('Active page background color', 'ajax-search-pro'), $sd['i_pagination_page_background']);
     $params[$o->getName()] = $o->getData();
     ?>
 </div>
-<div class="item"><?php
+<div class="item item-iso-nav"><?php
     $o = new wpdreamsColorPicker("i_pagination_font_color", __('Font color', 'ajax-search-pro'), $sd['i_pagination_font_color']);
     $params[$o->getName()] = $o->getData();
     ?>

@@ -37,27 +37,34 @@
       <div class="job-search-bar">
         <div class="container">
           <h3>Quick Job Search</h3>
-          <?php /*
-          <form action="" style="display: none;">
+          <form role="search" method="get" id="searchform" action="" class="form">
             <div>
               <img src="<?php echo get_template_directory_uri(); ?>/app/img/duration.svg" alt="">
-              <select name="" id="" class>
-                <option value="">Full Time</option>
+              <select name="jobDuration" id="jobDuration" >
+                <option value="fulltime">Full Time</option>
+                <option value="halftime">Half Time</option>
+                <option value="freelance">Freelance</option>
               </select>
             </div>
             <div>
               <img src="<?php echo get_template_directory_uri(); ?>/app/img/location.svg" alt="">
-              <input type="text" placeholder="Cape Town, SA">
+              <input type="text" placeholder="Cape Town, SA" value="" name="jobLocation" id="jobLocation">
             </div>
             <div>
               <img src="<?php echo get_template_directory_uri(); ?>/app/img/search.svg" alt="">
-              <input type="text" placeholder="Marketing">
+              <input type="text" placeholder="Marketing" value="" name="jobTitle" id="jobTitle" required="" >
             </div>
-            <button class="btn btn-primary">Search Jobs</button>
+            <button class="btn btn-primary" id="searchsubmit">Search Jobs</button>
           </form>
-           */ ?>
+
+          <div id="results" class="form-results">
+            <div class="loader"></div>
+          </div>
+
+           <?php /* 
           <div class="form"><?php echo do_shortcode('[wpdreams_ajaxsearchpro id=1]'); ?></div>
           <div class="form-results"><?php echo do_shortcode('[wpdreams_ajaxsearchpro_results id=1 element="div"]'); ?></div>
+          */?>
         </div>
       </div>
       <div class="about-section">

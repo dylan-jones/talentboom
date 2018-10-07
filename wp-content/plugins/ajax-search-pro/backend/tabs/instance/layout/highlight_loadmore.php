@@ -25,6 +25,12 @@
         $params[$o->getName()] = $o->getData();
         ?>
     </div>
+    <div class="item">
+        <?php
+        $o = new wpdreamsYesNo("more_results_infinite", __('<strong>Infinite scroll</strong> - Trigger loading more results on srolling near the end of results list', 'ajax-search-pro'), $sd['more_results_infinite']);
+        $params[$o->getName()] = $o->getData();
+        ?>
+    </div>
     <div class="item item-flex-nogrow" style="flex-wrap: wrap;">
         <?php
         $o = new wpdreamsText("showmoreresultstext", __('\' Show more results..\' text', 'ajax-search-pro'), $sd['showmoreresultstext']);

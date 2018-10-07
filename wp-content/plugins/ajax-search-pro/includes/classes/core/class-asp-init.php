@@ -412,6 +412,9 @@ class WD_ASP_Init {
                 wp_register_script('wd-asp-rpp-isotope', ASP_URL . 'js/' . $js_source . '/rpp_isotope.js', array($prereq), $media_query, $load_in_footer);
                 wp_enqueue_script('wd-asp-rpp-isotope');
             }
+            wp_register_script('wd-asp-inviewport', ASP_URL . 'js/' . $js_source . '/jquery.inviewport.js', array($prereq), $media_query, $load_in_footer);
+            wp_enqueue_script('wd-asp-inviewport');
+
             wp_register_script('wd-asp-ajaxsearchpro', ASP_URL . 'js/' . $js_source . '/jquery.ajaxsearchpro.js', array($prereq), $media_query, $load_in_footer);
             wp_enqueue_script('wd-asp-ajaxsearchpro');
 

@@ -183,7 +183,7 @@ function asp_do_init_options() {
         'mob_click_action_location' => 'same',
         'mob_return_action_location' => 'same',
         'mob_redirect_url' => '?s={phrase}',
-        'mob_hide_keyboard' => 0,
+        'mob_hide_keyboard' => 1,
         'mob_force_res_hover' => 0,
         'mob_force_sett_hover' => 0,
         'mob_force_sett_state' => 'closed',
@@ -482,6 +482,7 @@ function asp_do_init_options() {
 
         'showmoreresults' => 0,
         'showmoreresultstext' => 'More results...',
+        'more_results_infinite' => 1,
         'more_results_action' => 'ajax', // ajax, redirect, results_page, woo_results_page
         'more_redirect_url' => '?s={phrase}',
         'more_redirect_location' => 'same',
@@ -775,6 +776,7 @@ function asp_do_init_options() {
         'i_overlay_blur' => 1,
         'i_hide_content' => 1,
         'i_animation' => 'bounceIn',
+        'i_pagination' => 1,
         'i_rows' => 2,
         'i_res_container_margin' => "||0px||0px||0px||0px||",
         'i_res_container_padding' => "||0px||0px||0px||0px||",

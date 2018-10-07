@@ -1786,7 +1786,12 @@ if ( ! class_exists( 'ASP_Search_CPT' ) ) {
         }
 
         /**
-         * Fetches an image for bfi class
+         * Fetches an image for BFI class
+         *
+         * @param $post StdClass post object
+         * @param $get_content bool to request the post content
+         * @param $get_excerpt bool to request the post excerpt
+         * @return string image URL
          */
         protected function getBFIimage( $post, $get_content = false, $get_excerpt = false ) {
             if ( ! isset( $post->image ) || $post->image == null ) {

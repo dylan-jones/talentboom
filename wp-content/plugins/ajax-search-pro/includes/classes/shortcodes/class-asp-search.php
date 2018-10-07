@@ -213,7 +213,7 @@ if (!class_exists("WD_ASP_Search_Shortcode")) {
 
             do_action('asp_layout_after_shortcode', $id);
 
-            return $out;
+            return apply_filters('asp_shortcode_output', $out, $id);
         }
 
         /**

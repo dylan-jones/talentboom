@@ -218,6 +218,10 @@ if (!class_exists("WD_ASP_SearchOverride_Filter")) {
                 return false;
             }
 
+            // Is this the admin area?
+            if ( is_admin() )
+                return false;
+
             // If get method is used, then the cookies are not present or not used
             if (isset($_GET['p_asp_data']) || isset($_GET['np_asp_data'])) {
                 if ( $check_only )

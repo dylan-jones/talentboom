@@ -9,7 +9,8 @@ var sitename = 'thetalentboom';
 module.exports = {
   entry: {
     bundle: './app/index.js',
-    mapscript: './app/mapscript.js'
+    mapscript: './app/mapscript.js',
+    jobsearch: './app/jobsearch.js'
   },
   output: {
     filename: '[name].js',

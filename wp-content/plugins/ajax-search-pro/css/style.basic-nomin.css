@@ -425,6 +425,75 @@ div.asp_w.asp_r p.showmore {
     display: none;
     margin: 5px 0;
 }
+div.asp_w.asp_r.asp_more_res_loading p.showmore a,
+div.asp_w.asp_r.asp_more_res_loading p.showmore a span{
+    color: transparent !important;
+}
+
+@-webkit-keyframes shm-rot-simple {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        opacity: 0.85;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes shm-rot-simple {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        opacity: 0.85;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+div.asp_w.asp_r div.asp_showmore_container {
+    position: relative;
+}
+div.asp_w.asp_r. div.asp_moreres_loader {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+}
+div.asp_w.asp_r.asp_more_res_loading div.asp_moreres_loader {
+    display: block !important;
+}
+div.asp_w.asp_r div.asp_moreres_loader-inner {
+    height: 24px;
+    width: 24px;
+    animation: shm-rot-simple 0.8s infinite linear;
+    -webkit-animation: shm-rot-simple 0.8s infinite linear;
+    border: 4px solid #353535;
+    border-right-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    margin: -12px auto auto -12px;
+    left: 50%;
+}
 
 div.asp_hidden_data,
 div.asp_hidden_data * {

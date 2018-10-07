@@ -441,11 +441,11 @@ if (!class_exists('ASP_Search_ATTACHMENTS')) {
                              then 10 else 0 end)";
                         }
                     }
-
-                    $this->parts[] = array( $parts, $relevance_parts );
-                    $relevance_added = true;
                 }
                 /*---------------------------------------------------------------*/
+
+                $this->parts[] = array( $parts, $relevance_parts );
+                $relevance_added = true;
             }
 
             // Add the meta join if needed..

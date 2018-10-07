@@ -88,6 +88,14 @@ Generic classes
     user-select: none;
 }
 
+#wpdreams .disabled select,
+#wpdreams .disabled input,
+#wpdreams .disabled-opacity select,
+#wpdreams .disabled-opacity input {
+    user-select: none;
+    pointer-events: none;
+}
+
 #wpdreams .disabled-opacity {
     opacity: 1;
     max-height: 60px;
@@ -2148,6 +2156,7 @@ div#wpd_loading_msg {
 }
 
 #wpdreams .wpdreamsCustomPostTypes .extra_info,
+#wpdreams .wpdreamsTaxonomySelect .extra_info,
 #wpdreams .wd_cpt_select .extra_info {
     display: block;
     font-size: 11px;

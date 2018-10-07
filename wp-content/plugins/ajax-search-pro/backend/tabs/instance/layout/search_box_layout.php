@@ -64,5 +64,9 @@
         $o = new wpdreamsTextSmall("auto_populate_count", __(' Results count', 'ajax-search-pro'), $sd['auto_populate_count']);
         $params[$o->getName()] = $o->getData();
         ?>
+        <div class="errorMsg hiddend autop-count-err">
+            <?php echo __('The <strong>Results Count</strong> option is <strong>Disabled</strong> for compatibility reasons, because the <a class="asp_to_tab" tabid="405" href="#405">Load more feature</a> is enabled.
+            The default results count will be used, that is set under the <a class="asp_to_tab" tabid="111" href="#111">General Options -> Limits</a> panel.', 'ajax-search-pro'); ?>
+        </div>
     </div>
 </fieldset>

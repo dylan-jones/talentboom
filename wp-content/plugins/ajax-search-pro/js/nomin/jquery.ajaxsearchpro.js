@@ -140,7 +140,7 @@
             // Isotopic Layout variables
             $this.il = {
                 columns: 3,
-                rows: $this.o.iiRows,
+                rows: $this.o.iiPagination ? $this.o.iiRows : 10000,
                 itemsPerPage: 6
             };
 
@@ -263,6 +263,9 @@
 
             // Etc stuff..
             $this.initEtc();
+
+            // Init infinite scroll
+            $this.initInfiniteScroll();
 
             // After the first execution, this stays false
             firstIteration = false;
@@ -389,7 +392,7 @@
         initResultsBox: function() {
             var $this = this;
 
-            if ( isMobile() && $this.o.mobile.force_sett_hover == 1) {
+            if ( isMobile() && $this.o.mobile.force_res_hover == 1) {
                 $this.o.resultsposition = 'hover';
                 $this.n.resultsDiv.detach().appendTo("body");
             } else {
@@ -422,6 +425,86 @@
                 $this.n.results.addClass('photostack');
         },
 
+        initInfiniteScroll: function() {
+            // NOTE: Custom Scrollbar triggers are under the scrollbar script callbacks -> OnTotalScroll callbacks
+            var $this = this;
+            // No polaroid layout support
+            if ( $this.o.resultstype == 'polaroid' )
+                return false;
+
+            if ( $this.o.show_more.infinite ) {
+                // Vertical & Horizontal: Regular scroll + when custom scrollbar scroll is not present
+                // Isotopic: Regular scroll on non-paginated layout
+                var t;
+                $(window).add($this.n.results).on('scroll', function () {
+                    clearTimeout(t);
+                    t = setTimeout(function(){
+                        var $r = $('.item', $this.n.resultsDiv);
+
+                        // Show more not even visible
+                        if ($this.n.showmore.length == 0 || $this.n.showmore.css('display') == 'none') {
+                            return false;
+                        }
+
+                        // Isotopic pagination present? Abort.
+                        if (
+                            $this.o.resultstype == 'isotopic' &&
+                            $('nav.asp_navigation', $this.n.resultsDiv).css('display') != 'none'
+                        ) {
+                            return false;
+                        }
+                        // Vertical, scrollbar enabled & visible
+                        if (
+                            $this.o.resultstype == 'vertical' &&
+                            $('.mCS_y_hidden', $this.n.resultsDiv).length < 1
+                        ) {
+                            return false;
+                        }
+
+                        // Horizontal, scrollbar enabled & visible
+                        if (
+                            $this.o.resultstype == 'horizontal' &&
+                            $('.mCS_x_hidden', $this.n.resultsDiv).length < 1
+                        ) {
+                            return false;
+                        }
+
+                        var onViewPort = $r.last().is(':in-viewport(0, .asp_r_' + $this.o.rid + ')');
+                        var onScreen = $r.last().is(':in-viewport(0)');
+
+                        if (
+                            !$this.searching &&
+                            $r.length > 0 &&
+                            onViewPort && onScreen
+                        ) {
+                            $this.n.showmore.find('a.asp_showmore').trigger('click');
+                        }
+                    }, 80);
+                });
+
+                var tt;
+                $this.n.resultsDiv.on('nav_switch', function (e) {
+                    // Delay this a bit, in case the user quick-switches
+                    clearTimeout(tt);
+                    tt = setTimeout(function(){
+                        // Show more not even visible
+                        if ($this.n.showmore.length == 0 || $this.n.showmore.css('display') == 'none') {
+                            return false;
+                        }
+                        var $r = $('.item', $this.n.resultsDiv);
+
+                        if (
+                            !$this.searching &&
+                            $r.length > 0 &&
+                            $this.n.resultsDiv.find('nav.asp_navigation ul li').last().hasClass('asp_active')
+                        ) {
+                            $this.n.showmore.find('a.asp_showmore').trigger('click');
+                        }
+                    }, 800);
+                });
+            }
+        },
+
         monitorTouchMove: function() {
             var $this = this;
             $this.dragging = false;
@@ -451,10 +534,15 @@
 
             // YOAST uses __gaTracker, if not defined check for ga, if nothing go null, FUN EH??
             var fun = typeof __gaTracker == "function" ? __gaTracker : (typeof ga == "function" ? ga : null);
+            if (!window.location.origin) {
+              window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+            }
+            // Multisite Subdirectory (if exists)
+            var url = $this.o.homeurl.replace(window.location.origin, '');
 
             if (fun != null && $this.o.analytics && $this.o.analyticsString != '') {
                 fun('send', 'pageview', {
-                    'page': '/' + $this.o.analyticsString.replace("{asp_term}", term),
+                    'page': url + $this.o.analyticsString.replace("{asp_term}", term),
                     'title': 'Ajax Search'
                 });
             }
@@ -472,6 +560,8 @@
                     mouseWheel: {
                         preventDefault: !!$this.o.compact.enabled
                     },
+                    scrollInertia: 400,
+                    alwaysTriggerOffsets: false,
                     callbacks: {
                         whileScrolling: function() {
                             if (  Math.abs(this.mcs.top % 20) == 0 ) {
@@ -481,44 +571,13 @@
                                 }
                             }
                         },
-                        onScroll: function () {
-
-
-                            /*if (isMobile()) return;
-                            var top = parseInt($('.mCSBap_container', $this.n.results).position().top);
-                            var drg = $('.mCSBap_container .resdrg', $this.n.results);
-                            var children = $('.mCSBap_container .resdrg', $this.n.results).children();
-
-                            // Prevent scrolling, when close to the bottom element
-                            if (
-                                drg.height() - (Math.abs(top) + $this.n.results.height() ) <
-                                ($('.resdrg .item', $this.n.results).last().height() * 1.2)
-                            )
-                                return;
-
-                            var overall = 0;
-                            var prev = 3000;
-                            var diff = 4000;
-                            var s_diff = 10000;
-                            var s_overall = 10000;
-                            var $last = null;
-                            children.each(function () {
-                                diff = Math.abs((Math.abs(top) - overall));
-                                if (diff < prev) {
-                                    s_diff = diff;
-                                    s_overall = overall;
-                                    $last = $(this);
-                                }
-                                overall += $(this).outerHeight(true);
-                                prev = diff;
-                            });
-                            if ($last.hasClass('group'))
-                                s_overall = s_overall + ($last.outerHeight(true));
-
-                            $this.scroll.mCustScr("scrollTo", $last, {
-                                scrollInertia: 200,
-                                callbacks: false
-                            });*/
+                        onScroll: function () {},
+                        onTotalScrollOffset: 200,   // Show more trigger offset
+                        onTotalScroll:function(){   // Show more auto trigger
+                            if ( $this.o.show_more.infinite && $this.n.showmore.length > 0 ) {
+                                if ( $this.n.showmore.css('display') != 'none' )
+                                    $this.n.showmore.find('a.asp_showmore').trigger('click');
+                            }
                         }
                     }
                 });
@@ -543,12 +602,21 @@
                     scrollButtons: {
                         enable: true
                     },
+                    scrollInertia: 400,
+                    alwaysTriggerOffsets: false,
                     callbacks: {
                         whileScrolling: function() {
                             if (  Math.abs(this.mcs.left % 20) == 0 ) {
                                 if ( typeof $.fn.asp_lazy != 'undefined' ) {
                                     $(window).trigger('scroll');
                                 }
+                            }
+                        },
+                        onTotalScrollOffset: 200,   // Show more trigger offset
+                        onTotalScroll:function(){   // Show more auto trigger
+                            if ( $this.o.show_more.infinite && $this.n.showmore.length > 0 ) {
+                                if ( $this.n.showmore.css('display') != 'none' )
+                                    $this.n.showmore.find('a.asp_showmore').trigger('click');
                             }
                         }
                     }
@@ -575,16 +643,17 @@
 
             if ( $this.o.autop.state == "disabled" ) return false;
 
+            var count = $this.o.show_more.enabled && $this.o.show_more.action == 'ajax' ? false : $this.o.autop.count;
             var i = 0;
             var x = setInterval(function(){
                 if ( ASP.css_loaded == true ) {
                     if ($this.o.autop.state == "phrase") {
                         $this.n.text.val($this.o.autop.phrase);
-                        $this.search($this.o.autop.count);
+                        $this.search(count);
                     } else if ($this.o.autop.state == "latest") {
-                        $this.search($this.o.autop.count, 1);
+                        $this.search(count, 1);
                     } else {
-                        $this.search($this.o.autop.count, 2);
+                        $this.search(count, 2);
                     }
                     clearInterval(x);
                 }
@@ -648,7 +717,7 @@
             });
 
             // Select all checkboxes
-            $('.asp_option_cat input[type="checkbox"]', $this.n.searchsettings).on('asp_chbx_change', function(e){
+            $('.asp_option_cat input[type="checkbox"], .asp_option_cff input[type="checkbox"]', $this.n.searchsettings).on('asp_chbx_change', function(e){
                 var className = $(this).data("targetclass");
                 if ( typeof className == 'string' && className != '')
                     $("input." + className, $this.n.searchsettings).prop("checked", $(this).prop("checked"));
@@ -803,10 +872,15 @@
                         $("a.asp_prev", $this.n.resultsDiv).click();
                     }
                 });
+                $this.n.resultsDiv.bind("click", function (e) {
+                    e.stopImmediatePropagation();
+                });
+            } else {
+                // Only cancel on touch, if the swipe is not enabled
+                $this.n.resultsDiv.bind("click touchend", function (e) {
+                    e.stopImmediatePropagation();
+                });
             }
-            $this.n.resultsDiv.bind("click touchend", function (e) {
-                e.stopImmediatePropagation();
-            });
             $this.n.searchsettings.bind("click touchend", function (e) {
                 e.stopImmediatePropagation();
             });
@@ -1381,6 +1455,7 @@
                     timeout = 300;
                 }
                 setTimeout( function() {
+                    $this.currentPage = parseInt( $(_this).closest('nav').find('li.asp_active span').html(), 10 );
                     if ($(_this).hasClass('asp_prev') && !$('body').hasClass('rtl')) { // Revert on RTL
                         $this.currentPage = $this.currentPage == 1 ? Math.ceil($this.n.items.length / $this.il.itemsPerPage) : --$this.currentPage;
                     } else {
@@ -1400,6 +1475,8 @@
                     if ( typeof $.fn.asp_lazy != 'undefined' ) {
                         $(window).trigger('scroll');
                     }
+
+                    $this.n.resultsDiv.trigger('nav_switch');
                 }, timeout);
             });
             $this.n.resultsDiv.on('click touchend', 'nav>ul li', function (e) {
@@ -1426,6 +1503,8 @@
                     if ( typeof $.fn.asp_lazy != 'undefined' ) {
                         $(window).trigger('scroll');
                     }
+
+                    $this.n.resultsDiv.trigger('nav_switch');
                 }, timeout);
             });
         },
@@ -1446,14 +1525,11 @@
             var toTheLeft = Math.ceil( ( $prevLeft - $activeLeft + 2 * $activeWidth ) / $activeWidth );
 
             if (toTheLeft > 0) {
-
                 // If the active is the first, go to the beginning
                 if ( $('nav>ul li.asp_active', $this.n.resultsDiv).prev().length == 0) {
-
                     $('nav>ul', $this.n.resultsDiv).css({
                         "left": $activeWidth + "px"
                     });
-
                     return;
                 }
 
@@ -1875,7 +1951,6 @@
 
         search: function ( count, order, recall, apiCall ) {
             var $this = this;
-            var isAutop = false;
 
             if ( typeof recall == "undefined" )
                 recall = false;
@@ -1928,11 +2003,9 @@
 
             if ( typeof count != "undefined" && count !== false ) {
                 data.options += "&force_count=" + parseInt(count);
-                isAutop = true;
             }
             if ( typeof order != "undefined" && order !== false ) {
                 data.options += "&force_order=" + parseInt(order);
-                isAutop = true;
             }
             $this.analytics($this.n.text.val());
 
@@ -1961,7 +2034,7 @@
                         if ( $this.o.statistics )
                             $this.stat_addKeyword($this.o.id, $this.n.text.val());
                     } else {
-                        $this.n.resdrg.html($this.n.resdrg.html() + html_response);
+                        $this.updateResults(html_response);
                         $this.results_num += data_response.results_count;
                     }
                     $(".asp_keyword", $this.n.resdrg).on('click', function () {
@@ -2000,6 +2073,7 @@
                             $('a', $this.n.showmore).on('click', function(e){
                                 e.preventDefault();
                                 if ( $this.o.show_more.action == "ajax") {
+                                    $this.showMoreResLoader();
                                     $this.search(false, false, true);
                                 } else {
                                     if ( $this.o.show_more.action == 'results_page' ) {
@@ -2057,6 +2131,34 @@
             }
         },
 
+        updateResults: function( html ) {
+            var $this = this;
+            if (
+                $this.o.resultstype == 'isotopic' &&
+                $this.call_num > 0 &&
+                $this.isotopic != null &&
+                typeof $this.isotopic.appended != 'undefined' &&
+                $this.n.items.length > 0
+            ) {
+                var $items = $(html);
+                var $last = $this.n.items.last();
+                var last = parseInt( $this.n.items.last().attr('data-itemnum') );
+                $.each($items, function(k,o){
+                    $($items[k]).attr('data-itemnum', ++last);
+                    $($items[k]).css({
+                        'width': $last.css('width'),
+                        'height': $last.css('height')
+                    })
+                });
+                $this.n.resdrg.append( $items );
+
+                $this.isotopic.appended( $items );
+                $this.n.items = $('.item', $this.n.resultsDiv);
+            } else {
+                $this.n.resdrg.html($this.n.resdrg.html() + html);
+            }
+        },
+
         showResults: function( ) {
             var $this = this;
 
@@ -2097,7 +2199,8 @@
                 }
             }
 
-            if (isMobile() && $this.o.mobile.hide_keyboard)
+            // When opening the results box only
+            if ( isMobile() && $this.o.mobile.hide_keyboard && !$this.resultsOpened )
                 document.activeElement.blur();
 
             if ( $this.o.settingsHideOnRes && $this.o.blocking == false )
@@ -2109,7 +2212,6 @@
                         chainable: false,
                         visibleOnly: $this.o.resultstype == 'isotopic'
                     });
-                    //$this.n.resultsDiv.find('.asp_lazy').removeClass('asp_lazy');
                 }, 100)
             }
 
@@ -2148,6 +2250,10 @@
             $this.n.c.trigger("asp_results_hide", [$this.o.id, $this.o.iid]);
         },
 
+        showMoreResLoader() {
+            $this.n.resultsDiv.addClass('asp_more_res_loading');
+        },
+
         showLoader: function( ) {
             var $this = this;
 
@@ -2178,6 +2284,7 @@
             });
             $(".asp_res_loader", $this.n.resultsDiv).addClass("hiddend");
             $this.n.results.css("display", "");
+            $this.n.resultsDiv.removeClass('asp_more_res_loading');
         },
 
 
@@ -2268,6 +2375,7 @@
                         $this.n.results.css({
                             height: final_h
                         });
+
                     }
                 }
 
@@ -2286,10 +2394,14 @@
                 // ..then all the other math stuff from the resize event
                 $this.resize();
 
-                if ($this.is_scroll) {
-                    // .. and finally scroll back to the first item nicely
-                    if ($this.call_num < 1)
+                if ($this.call_num < 1) {
+                    if ($this.is_scroll) {
+                        // .. and finally scroll back to the first item nicely
                         $this.scroll.mCustScr('scrollTo', 0);
+                    } else {
+                        // Scroll to the top with a regular scrollbar
+                        $this.n.results.scrollTop(0);
+                    }
                 }
 
 
@@ -2422,8 +2534,12 @@
                 }
             }
 
-            $this.calculateIsotopeRows();
+            if ( $this.call_num == 0 )
+                $this.calculateIsotopeRows();
+
             $this.showPagination();
+            $this.isotopicPagerScroll();
+
             if ($this.n.items.length == 0) {
                 var h = ($('.nores', $this.n.results).outerHeight(true) > ($this.o.resultitemheight) ? ($this.o.resultitemheight) : $('.nores', $this.n.results).outerHeight(true));
                 $this.n.results.css({
@@ -2438,18 +2554,19 @@
             } else {
                 // Initialize the main
                 if (typeof rpp_isotope !== 'undefined') {
-                    if ( $this.isotopic != null && typeof $this.isotopic.destroy != 'undefined' )
+                    if ( $this.isotopic != null && typeof $this.isotopic.destroy != 'undefined' && $this.call_num == 0 )
                         $this.isotopic.destroy();
-                    $this.isotopic = new rpp_isotope('#ajaxsearchprores' + $this.o.rid + " .resdrg", {
-                        // options
-                        isOriginLeft: !$('body').hasClass('rtl'),
-                        itemSelector: 'div.item',
-                        layoutMode: 'masonry',
-                        filter: $this.filterFns['number'],
-                        masonry: {
-                            "gutter": $this.o.iiGutter
-                        }
-                    });
+                    if ( $this.call_num == 0 || $this.isotopic == null )
+                        $this.isotopic = new rpp_isotope('#ajaxsearchprores' + $this.o.rid + " .resdrg", {
+                            // options
+                            isOriginLeft: !$('body').hasClass('rtl'),
+                            itemSelector: 'div.item',
+                            layoutMode: 'masonry',
+                            filter: $this.filterFns['number'],
+                            masonry: {
+                                "gutter": $this.o.iiGutter
+                            }
+                        });
                 } else {
                     // Isotope is not included within the scripts, alert the user!
                     $this.raiseError("isotope");
@@ -2539,11 +2656,14 @@
             var $this = this;
             force_refresh = typeof force_refresh !== 'undefined' ? force_refresh : false;
 
+            if ( !$this.o.iiPagination )
+                return false;
+
             if ( $this.call_num < 1 || force_refresh)
                 $('nav.asp_navigation ul li', $this.n.resultsDiv).remove();
             $('nav.asp_navigation', $this.n.resultsDiv).css('display', 'none');
 
-            $('nav.asp_navigation ul', $this.n.resultsDiv).removeAttr("style");
+            //$('nav.asp_navigation ul', $this.n.resultsDiv).removeAttr("style");
 
             var oldSize = $('nav.asp_navigation ul li', $this.n.resultsDiv).length;
             oldSize = oldSize < 1 ? 1 : oldSize;
@@ -2566,10 +2686,7 @@
                     if ($this.call_num > 0 && !force_refresh) {
                         // Has to be delayed, or it freezes the browser.. (??)
                         setTimeout(function(){
-                            if ( typeof $('nav.asp_navigation ul li', $this.n.resultsDiv).get(oldSize) != "undefined")
-                                $('nav.asp_navigation ul li', $this.n.resultsDiv).get(oldSize).click();
-                            else
-                                $('nav.asp_navigation ul li', $this.n.resultsDiv).last().click();
+                            $('nav.asp_navigation ul li.asp_active', $this.n.resultsDiv).click();
                         }, 120);
                     }
                 }
@@ -2602,7 +2719,7 @@
             var newItemH = (newItemW / itemWidth) * $this.o.iitemsHeight;
 
             $this.il.columns = floorColumnCount;
-            $this.il.itemsPerPage = floorColumnCount * $this.o.iiRows;
+            $this.il.itemsPerPage = floorColumnCount * $this.il.rows;
 
             // This data needs do be written to the DOM, because the isotope arrange can't see the changes
             $this.n.resultsDiv.data({
@@ -3518,26 +3635,7 @@
 
     $.plugin('ajaxsearchpro', methods);
 
-    $.fn.mobileFix = function (options) {
-        var $parent = $(this),
-            $fixedElements = $(options.fixedElements);
-
-        $(document)
-            .on('focus', options.inputElements, function(e) {
-                $parent.addClass(options.addClass);
-            })
-            .on('blur', options.inputElements, function(e) {
-                $parent.removeClass(options.addClass);
-
-                // Fix for some scenarios where you need to start scrolling
-                setTimeout(function() {
-                    $(document).scrollTop($(document).scrollTop())
-                }, 1);
-            });
-
-        return this; // Allowing chaining
-    };
-
+    // ------- Helpers --------
     /**
      *
      *  Base64 encode / decode
@@ -3679,4 +3777,5 @@
         }
 
     }
+    //  ------- End of Helpers  -------
 })(jQuery);

@@ -74,6 +74,7 @@ $x_in = 0;
         <?php
         $item->asp_f_checkboxes_value = apply_filters("asp_cf_checkbox_values", $item->asp_f_checkboxes_value, $item);
         $ccfi = 0;
+        $_field_name_nws = preg_replace('/\s+/', '', $_field_name);
         ?>
         <?php foreach($item->asp_f_checkboxes_value as $checkbox): ?>
             <?php
@@ -82,12 +83,20 @@ $x_in = 0;
                 $checked = isset($style['_fo']['aspf'][$_field_name][$ccfi]) ? ' checked="checked"' : "";
             else
                 $checked = strpos($checkbox[1], '**') > 0 ? ' checked="checked"':'';
+            if ( $ccfi == 1 && $checkbox[0] == '') {
+                $select_all = " data-targetclass='asp_cf_select_".$_field_name_nws."' ";
+                $cb_name = '';
+            } else {
+                $select_all = " class='asp_cf_select_".$_field_name_nws."' ";
+                $cb_name = 'aspf[' . $_field_name . '][' .$ccfi. ']';
+            }
             ?>
-            <div class="asp_option">
+            <div class="asp_option asp_option_cff">
                 <div class="asp_option_inner">
                     <input type="checkbox" value="<?php echo str_replace('"', '&#34;', $checkbox[0]); ?>" id="aspf<?php echo $_in; ?>[<?php echo $_field_name; ?>][<?php echo $ccfi; ?>]"
                            aria-label="<?php echo esc_html( str_replace('**', '', $checkbox[1]) ); ?>"
-                           name="aspf[<?php echo $_field_name; ?>][<?php echo $ccfi; ?>]" <?php echo $checked; ?>>
+                           <?php echo $select_all; ?>
+                           name="<?php echo $cb_name; ?>" <?php echo $checked; ?>>
                     <label aria-hidden="true" for="aspf<?php echo $_in; ?>[<?php echo $_field_name; ?>][<?php echo $ccfi; ?>]"></label>
                 </div>
                 <div class="asp_option_label"><?php echo str_replace('**', '', $checkbox[1]); ?></div>

@@ -336,6 +336,7 @@ sample_value3||Sample Label 3</textarea>
         <div class='one-item asp_f_checkboxes asp_f_type hiddend'>
             <label for='asp_f_checkboxes_value'><?php echo __('Checkbox values', 'ajax-search-pro'); ?></label>
             <textarea name='asp_f_checkboxes_value'/>
+||Select all**
 sample_value1||Sample Label 1**
 sample_value2||Sample Label 2
 sample_value3||Sample Label 3**</textarea>

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress "
 "Pot v1.0.0\n"
-"POT-Creation-Date: 2018-09-03 "
-"10:17+0200\n"
+"POT-Creation-Date: 2018-10-06 "
+"17:33+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your Name "
 "<you@example.com>\n"
@@ -1433,7 +1433,7 @@ msgid "Add new priority group"
 msgstr ""
 
 #: backend/priorities.php:105
-#: backend/tabs/instance/frontend/custom_fields.php:625
+#: backend/tabs/instance/frontend/custom_fields.php:626
 msgid "Save!"
 msgstr ""
 
@@ -2157,7 +2157,7 @@ msgstr ""
 #: backend/settings/class/dateinterval.class.php:28
 #: backend/settings/class/dateinterval.class.php:45
 #: backend/tabs/instance/frontend/custom_fields.php:300
-#: backend/tabs/instance/frontend/custom_fields.php:478
+#: backend/tabs/instance/frontend/custom_fields.php:479
 msgid "Type"
 msgstr ""
 
@@ -2168,12 +2168,12 @@ msgstr ""
 #: backend/settings/class/four.class.php:26
 #: backend/tabs/instance/frontend/search_button.php:76
 #: backend/tabs/instance/frontend/search_button.php:88
-#: backend/tabs/instance/theme/isotopic_nav.php:9
+#: backend/tabs/instance/theme/isotopic_nav.php:21
 msgid "Top"
 msgstr ""
 
 #: backend/settings/class/four.class.php:27
-#: backend/tabs/instance/theme/isotopic_nav.php:10
+#: backend/tabs/instance/theme/isotopic_nav.php:22
 msgid "Bottom"
 msgstr ""
 
@@ -2203,7 +2203,7 @@ msgstr ""
 #: backend/settings/class/wd_draggable_fields.class.php:61
 #: backend/settings/class/wd_taxonomy_term_select.class.php:128
 #: backend/tabs/instance/frontend/custom_fields.php:304
-#: backend/tabs/instance/frontend/custom_fields.php:482
+#: backend/tabs/instance/frontend/custom_fields.php:483
 msgid "Checkboxes"
 msgstr ""
 
@@ -2287,7 +2287,7 @@ msgstr ""
 msgid "No tags found for this phrase"
 msgstr ""
 
-#: backend/settings/class/taxonomy_select.class.php:43
+#: backend/settings/class/taxonomy_select.class.php:48
 msgid ""
 "Drag here the taxonomies you want "
 "to "
@@ -2459,7 +2459,7 @@ msgstr ""
 
 #: backend/settings/class/wd_taxonomy_term_select.class.php:132
 #: backend/tabs/instance/frontend/custom_fields.php:302
-#: backend/tabs/instance/frontend/custom_fields.php:480
+#: backend/tabs/instance/frontend/custom_fields.php:481
 msgid "Radio"
 msgstr ""
 
@@ -3839,137 +3839,137 @@ msgid "Add new item"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:288
-#: backend/tabs/instance/frontend/custom_fields.php:466
+#: backend/tabs/instance/frontend/custom_fields.php:467
 msgid "Title label"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:289
-#: backend/tabs/instance/frontend/custom_fields.php:467
+#: backend/tabs/instance/frontend/custom_fields.php:468
 msgid "Title here.."
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:292
-#: backend/tabs/instance/frontend/custom_fields.php:470
+#: backend/tabs/instance/frontend/custom_fields.php:471
 msgid ""
 "Show the label on the frontend?"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:296
-#: backend/tabs/instance/frontend/custom_fields.php:474
+#: backend/tabs/instance/frontend/custom_fields.php:475
 msgid "Custom Field"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:303
-#: backend/tabs/instance/frontend/custom_fields.php:481
+#: backend/tabs/instance/frontend/custom_fields.php:482
 msgid "Dropdown"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:305
-#: backend/tabs/instance/frontend/custom_fields.php:483
+#: backend/tabs/instance/frontend/custom_fields.php:484
 msgid "Hidden"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:306
-#: backend/tabs/instance/frontend/custom_fields.php:484
+#: backend/tabs/instance/frontend/custom_fields.php:485
 #: backend/tabs/priorities/priority_groups.php:198
 msgid "Text"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:307
-#: backend/tabs/instance/frontend/custom_fields.php:485
+#: backend/tabs/instance/frontend/custom_fields.php:486
 msgid "DatePicker"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:308
-#: backend/tabs/instance/frontend/custom_fields.php:486
+#: backend/tabs/instance/frontend/custom_fields.php:487
 msgid "Slider"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:309
-#: backend/tabs/instance/frontend/custom_fields.php:487
+#: backend/tabs/instance/frontend/custom_fields.php:488
 msgid "Range Slider"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:313
-#: backend/tabs/instance/frontend/custom_fields.php:491
+#: backend/tabs/instance/frontend/custom_fields.php:492
 msgid "Radio values"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:322
-#: backend/tabs/instance/frontend/custom_fields.php:496
+#: backend/tabs/instance/frontend/custom_fields.php:497
 msgid "Multiselect?"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:324
-#: backend/tabs/instance/frontend/custom_fields.php:498
+#: backend/tabs/instance/frontend/custom_fields.php:499
 msgid "Searchable?"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:326
-#: backend/tabs/instance/frontend/custom_fields.php:500
+#: backend/tabs/instance/frontend/custom_fields.php:501
 msgid "placeholder"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:328
-#: backend/tabs/instance/frontend/custom_fields.php:502
+#: backend/tabs/instance/frontend/custom_fields.php:503
 msgid "Dropdown values"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:337
-#: backend/tabs/instance/frontend/custom_fields.php:507
+#: backend/tabs/instance/frontend/custom_fields.php:508
 msgid "Checkbox values"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:344
-#: backend/tabs/instance/frontend/custom_fields.php:510
+#: backend/tabs/instance/frontend/custom_fields.php:345
+#: backend/tabs/instance/frontend/custom_fields.php:511
 msgid "Checkbox logic"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:351
-#: backend/tabs/instance/frontend/custom_fields.php:517
+#: backend/tabs/instance/frontend/custom_fields.php:352
+#: backend/tabs/instance/frontend/custom_fields.php:518
 msgid "Hidden value"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:353
-#: backend/tabs/instance/frontend/custom_fields.php:519
+#: backend/tabs/instance/frontend/custom_fields.php:354
+#: backend/tabs/instance/frontend/custom_fields.php:520
 msgid ""
 "An invisible element. Used for "
 "filtering every time without user "
 "input."
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:356
-#: backend/tabs/instance/frontend/custom_fields.php:522
+#: backend/tabs/instance/frontend/custom_fields.php:357
+#: backend/tabs/instance/frontend/custom_fields.php:523
 msgid "Text input"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:358
-#: backend/tabs/instance/frontend/custom_fields.php:524
+#: backend/tabs/instance/frontend/custom_fields.php:359
+#: backend/tabs/instance/frontend/custom_fields.php:525
 msgid "A text input element."
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:361
-#: backend/tabs/instance/frontend/custom_fields.php:527
+#: backend/tabs/instance/frontend/custom_fields.php:362
+#: backend/tabs/instance/frontend/custom_fields.php:528
 msgid "Date storage format"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:363
-#: backend/tabs/instance/frontend/custom_fields.php:529
+#: backend/tabs/instance/frontend/custom_fields.php:364
+#: backend/tabs/instance/frontend/custom_fields.php:530
 msgid ""
 "MySQL DateTime/ACF datetime field"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:364
+#: backend/tabs/instance/frontend/custom_fields.php:365
 msgid "ACF date "
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:365
-#: backend/tabs/instance/frontend/custom_fields.php:531
+#: backend/tabs/instance/frontend/custom_fields.php:366
+#: backend/tabs/instance/frontend/custom_fields.php:532
 msgid "Timestamp"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:368
-#: backend/tabs/instance/frontend/custom_fields.php:534
+#: backend/tabs/instance/frontend/custom_fields.php:369
+#: backend/tabs/instance/frontend/custom_fields.php:535
 #, php-format
 msgid ""
 "NOTICE: The save format must be "
@@ -3978,16 +3978,16 @@ msgid ""
 "options.</a>"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:371
-#: backend/tabs/instance/frontend/custom_fields.php:537
+#: backend/tabs/instance/frontend/custom_fields.php:372
+#: backend/tabs/instance/frontend/custom_fields.php:538
 msgid ""
 "NOTICE: The MySql datetime format "
 "is <strong>Y-m-d H:i:s</strong>, "
 "for example: 2001-03-10 17:16:18"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:374
-#: backend/tabs/instance/frontend/custom_fields.php:540
+#: backend/tabs/instance/frontend/custom_fields.php:375
+#: backend/tabs/instance/frontend/custom_fields.php:541
 msgid ""
 "NOTICE: The timestamp is a numeric "
 "format, for example "
@@ -3996,8 +3996,8 @@ msgid ""
 "(UTC)"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:379
-#: backend/tabs/instance/frontend/custom_fields.php:545
+#: backend/tabs/instance/frontend/custom_fields.php:380
+#: backend/tabs/instance/frontend/custom_fields.php:546
 #: backend/tabs/instance/frontend/date.php:19
 #: backend/tabs/instance/frontend/date.php:40
 #, php-format
@@ -4007,159 +4007,159 @@ msgid ""
 "\">list of accepted params</a>"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:382
-#: backend/tabs/instance/frontend/custom_fields.php:413
-#: backend/tabs/instance/frontend/custom_fields.php:548
-#: backend/tabs/instance/frontend/custom_fields.php:579
+#: backend/tabs/instance/frontend/custom_fields.php:383
+#: backend/tabs/instance/frontend/custom_fields.php:414
+#: backend/tabs/instance/frontend/custom_fields.php:549
+#: backend/tabs/instance/frontend/custom_fields.php:580
 msgid "Default Value"
-msgstr ""
-
-#: backend/tabs/instance/frontend/custom_fields.php:384
-#: backend/tabs/instance/frontend/custom_fields.php:550
-msgid "Current date"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:385
 #: backend/tabs/instance/frontend/custom_fields.php:551
-msgid "Relative date"
+msgid "Current date"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:386
 #: backend/tabs/instance/frontend/custom_fields.php:552
+msgid "Relative date"
+msgstr ""
+
+#: backend/tabs/instance/frontend/custom_fields.php:387
+#: backend/tabs/instance/frontend/custom_fields.php:553
 msgid "Select date"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:392
-#: backend/tabs/instance/frontend/custom_fields.php:558
+#: backend/tabs/instance/frontend/custom_fields.php:393
+#: backend/tabs/instance/frontend/custom_fields.php:559
 msgid ""
 "Use <strong>negative values</"
 "strong> to indicate date before the "
 "current."
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:395
-#: backend/tabs/instance/frontend/custom_fields.php:561
+#: backend/tabs/instance/frontend/custom_fields.php:396
+#: backend/tabs/instance/frontend/custom_fields.php:562
 msgid "Show results.."
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:397
-#: backend/tabs/instance/frontend/custom_fields.php:563
+#: backend/tabs/instance/frontend/custom_fields.php:398
+#: backend/tabs/instance/frontend/custom_fields.php:564
 msgid "..before the date (to date)"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:398
-msgid "..after the date (from date)"
-msgstr ""
-
 #: backend/tabs/instance/frontend/custom_fields.php:399
-#: backend/tabs/instance/frontend/custom_fields.php:565
-msgid "..matching the date"
+msgid "..after the date (from date)"
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:400
 #: backend/tabs/instance/frontend/custom_fields.php:566
+msgid "..matching the date"
+msgstr ""
+
+#: backend/tabs/instance/frontend/custom_fields.php:401
+#: backend/tabs/instance/frontend/custom_fields.php:567
 msgid "..not matching the date"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:404
-#: backend/tabs/instance/frontend/custom_fields.php:421
-#: backend/tabs/instance/frontend/custom_fields.php:570
-#: backend/tabs/instance/frontend/custom_fields.php:587
+#: backend/tabs/instance/frontend/custom_fields.php:405
+#: backend/tabs/instance/frontend/custom_fields.php:422
+#: backend/tabs/instance/frontend/custom_fields.php:571
+#: backend/tabs/instance/frontend/custom_fields.php:588
 msgid "Slider range"
-msgstr ""
-
-#: backend/tabs/instance/frontend/custom_fields.php:406
-#: backend/tabs/instance/frontend/custom_fields.php:423
-#: backend/tabs/instance/frontend/custom_fields.php:572
-#: backend/tabs/instance/frontend/custom_fields.php:589
-msgid ""
-"Leave them empty to get the values "
-"automatically."
 msgstr ""
 
 #: backend/tabs/instance/frontend/custom_fields.php:407
 #: backend/tabs/instance/frontend/custom_fields.php:424
 #: backend/tabs/instance/frontend/custom_fields.php:573
 #: backend/tabs/instance/frontend/custom_fields.php:590
+msgid ""
+"Leave them empty to get the values "
+"automatically."
+msgstr ""
+
+#: backend/tabs/instance/frontend/custom_fields.php:408
+#: backend/tabs/instance/frontend/custom_fields.php:425
+#: backend/tabs/instance/frontend/custom_fields.php:574
+#: backend/tabs/instance/frontend/custom_fields.php:591
 msgid "Step"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:409
-#: backend/tabs/instance/frontend/custom_fields.php:426
-#: backend/tabs/instance/frontend/custom_fields.php:575
-#: backend/tabs/instance/frontend/custom_fields.php:592
+#: backend/tabs/instance/frontend/custom_fields.php:410
+#: backend/tabs/instance/frontend/custom_fields.php:427
+#: backend/tabs/instance/frontend/custom_fields.php:576
+#: backend/tabs/instance/frontend/custom_fields.php:593
 msgid "Prefix"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:411
-#: backend/tabs/instance/frontend/custom_fields.php:428
-#: backend/tabs/instance/frontend/custom_fields.php:577
-#: backend/tabs/instance/frontend/custom_fields.php:594
+#: backend/tabs/instance/frontend/custom_fields.php:412
+#: backend/tabs/instance/frontend/custom_fields.php:429
+#: backend/tabs/instance/frontend/custom_fields.php:578
+#: backend/tabs/instance/frontend/custom_fields.php:595
 msgid "Suffix"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:415
-#: backend/tabs/instance/frontend/custom_fields.php:434
-#: backend/tabs/instance/frontend/custom_fields.php:581
-#: backend/tabs/instance/frontend/custom_fields.php:600
+#: backend/tabs/instance/frontend/custom_fields.php:416
+#: backend/tabs/instance/frontend/custom_fields.php:435
+#: backend/tabs/instance/frontend/custom_fields.php:582
+#: backend/tabs/instance/frontend/custom_fields.php:601
 msgid "Thousands separator"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:417
-#: backend/tabs/instance/frontend/custom_fields.php:436
-#: backend/tabs/instance/frontend/custom_fields.php:583
-#: backend/tabs/instance/frontend/custom_fields.php:602
+#: backend/tabs/instance/frontend/custom_fields.php:418
+#: backend/tabs/instance/frontend/custom_fields.php:437
+#: backend/tabs/instance/frontend/custom_fields.php:584
+#: backend/tabs/instance/frontend/custom_fields.php:603
 msgid "Decimal places"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:430
-#: backend/tabs/instance/frontend/custom_fields.php:596
+#: backend/tabs/instance/frontend/custom_fields.php:431
+#: backend/tabs/instance/frontend/custom_fields.php:597
 msgid "Track 1 default"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:432
-#: backend/tabs/instance/frontend/custom_fields.php:598
+#: backend/tabs/instance/frontend/custom_fields.php:433
+#: backend/tabs/instance/frontend/custom_fields.php:599
 msgid "Track 2 default"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:440
-#: backend/tabs/instance/frontend/custom_fields.php:606
+#: backend/tabs/instance/frontend/custom_fields.php:441
+#: backend/tabs/instance/frontend/custom_fields.php:607
 #: backend/tabs/priorities/priority_groups.php:124
 #: backend/tabs/priorities/priority_groups.php:188
 msgid "Operator"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:455
+#: backend/tabs/instance/frontend/custom_fields.php:456
 msgid ""
 "Use the numeric operators for "
 "numeric values and string operators "
 "for text values"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:458
+#: backend/tabs/instance/frontend/custom_fields.php:459
 msgid "Reset"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:459
+#: backend/tabs/instance/frontend/custom_fields.php:460
 msgid "Add!"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:530
+#: backend/tabs/instance/frontend/custom_fields.php:531
 msgid "ACF date field"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:564
+#: backend/tabs/instance/frontend/custom_fields.php:565
 msgid "..after the date (from date"
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:621
+#: backend/tabs/instance/frontend/custom_fields.php:622
 msgid ""
 "Use the numeric operators for "
 "numeric values and string operators "
 "for text values."
 msgstr ""
 
-#: backend/tabs/instance/frontend/custom_fields.php:624
+#: backend/tabs/instance/frontend/custom_fields.php:625
 msgid "Back"
 msgstr ""
 
@@ -4429,7 +4429,7 @@ msgstr ""
 #: backend/tabs/instance/general/behaviour.php:124
 #: backend/tabs/instance/general/mobile_behavior.php:34
 #: backend/tabs/instance/general/mobile_behavior.php:53
-#: backend/tabs/instance/layout/highlight_loadmore.php:32
+#: backend/tabs/instance/layout/highlight_loadmore.php:38
 msgid " location: "
 msgstr ""
 
@@ -5879,28 +5879,36 @@ msgid "' Show more results..' url"
 msgstr ""
 
 #: backend/tabs/instance/layout/highlight_loadmore.php:30
+msgid ""
+"<strong>Infinite scroll</strong> - "
+"Trigger loading more results on "
+"srolling near the end of results "
+"list"
+msgstr ""
+
+#: backend/tabs/instance/layout/highlight_loadmore.php:36
 msgid "' Show more results..' text"
 msgstr ""
 
-#: backend/tabs/instance/layout/highlight_loadmore.php:45
+#: backend/tabs/instance/layout/highlight_loadmore.php:51
 msgid ""
 "Results text keyword highlighter"
 msgstr ""
 
-#: backend/tabs/instance/layout/highlight_loadmore.php:47
+#: backend/tabs/instance/layout/highlight_loadmore.php:53
 msgid ""
 "Highlight search text in results?"
 msgstr ""
 
-#: backend/tabs/instance/layout/highlight_loadmore.php:51
+#: backend/tabs/instance/layout/highlight_loadmore.php:57
 msgid "Highlight only whole words?"
 msgstr ""
 
-#: backend/tabs/instance/layout/highlight_loadmore.php:55
+#: backend/tabs/instance/layout/highlight_loadmore.php:61
 msgid "Highlight text color"
 msgstr ""
 
-#: backend/tabs/instance/layout/highlight_loadmore.php:59
+#: backend/tabs/instance/layout/highlight_loadmore.php:65
 msgid ""
 "Highlight-text background color"
 msgstr ""
@@ -6104,6 +6112,21 @@ msgstr ""
 
 #: backend/tabs/instance/layout/search_box_layout.php:64
 msgid " Results count"
+msgstr ""
+
+#: backend/tabs/instance/layout/search_box_layout.php:68
+msgid ""
+"The <strong>Results Count</strong> "
+"option is <strong>Disabled</strong> "
+"for compatibility reasons, because "
+"the <a class=\"asp_to_tab\" tabid="
+"\"405\" href=\"#405\">Load more "
+"feature</a> is enabled.\n"
+"            The default results "
+"count will be used, that is set "
+"under the <a class=\"asp_to_tab\" "
+"tabid=\"111\" href=\"#111\">General "
+"Options -> Limits</a> panel."
 msgstr ""
 
 #: backend/tabs/instance/layout_options.php:2
@@ -6587,35 +6610,50 @@ msgstr ""
 msgid "Search input font"
 msgstr ""
 
-#: backend/tabs/instance/theme/isotopic_nav.php:7
-msgid "Navigation position"
+#: backend/tabs/instance/theme/isotopic_nav.php:8
+msgid ""
+"Display the pagination navigation?"
 msgstr ""
 
 #: backend/tabs/instance/theme/isotopic_nav.php:11
-msgid "Both Top and Bottom"
+msgid "Rows count per page"
+msgstr ""
+
+#: backend/tabs/instance/theme/isotopic_nav.php:15
+msgid ""
+"If the item would exceed the row "
+"limit, it gets placed to a new page."
 msgstr ""
 
 #: backend/tabs/instance/theme/isotopic_nav.php:19
+msgid "Navigation position"
+msgstr ""
+
+#: backend/tabs/instance/theme/isotopic_nav.php:23
+msgid "Both Top and Bottom"
+msgstr ""
+
+#: backend/tabs/instance/theme/isotopic_nav.php:31
 msgid "Pagination background"
 msgstr ""
 
-#: backend/tabs/instance/theme/isotopic_nav.php:25
+#: backend/tabs/instance/theme/isotopic_nav.php:37
 msgid "Arrow image"
 msgstr ""
 
-#: backend/tabs/instance/theme/isotopic_nav.php:53
+#: backend/tabs/instance/theme/isotopic_nav.php:65
 msgid "Arrow background color"
 msgstr ""
 
-#: backend/tabs/instance/theme/isotopic_nav.php:58
+#: backend/tabs/instance/theme/isotopic_nav.php:70
 msgid "Arrow color"
 msgstr ""
 
-#: backend/tabs/instance/theme/isotopic_nav.php:63
+#: backend/tabs/instance/theme/isotopic_nav.php:75
 msgid "Active page background color"
 msgstr ""
 
-#: backend/tabs/instance/theme/isotopic_nav.php:68
+#: backend/tabs/instance/theme/isotopic_nav.php:80
 msgid "Font color"
 msgstr ""
 
@@ -6713,17 +6751,7 @@ msgstr ""
 msgid "Display animation"
 msgstr ""
 
-#: backend/tabs/instance/theme/isotopic_res.php:128
-msgid "Rows count"
-msgstr ""
-
-#: backend/tabs/instance/theme/isotopic_res.php:132
-msgid ""
-"If the item would exceed the row "
-"limit, it gets placed to a new page."
-msgstr ""
-
-#: backend/tabs/instance/theme/isotopic_res.php:164
+#: backend/tabs/instance/theme/isotopic_res.php:156
 msgid "Result box background"
 msgstr ""
 

@@ -1444,23 +1444,76 @@ if ( !function_exists("asp_acf_get_field_choices") ) {
                 }
             }
         }
-        $acf_posts = get_posts( array('post_type' => 'acf', 'posts_per_page' => -1) );
-        if ( !is_wp_error($acf_posts) ) {
-            foreach ($acf_posts as $acf) {
-                $meta = get_post_meta($acf->ID);
-                foreach ($meta as $key => $field) {
-                    if (substr($key, 0, 6) == 'field_') {
-                        $field = unserialize($field[0]);
-                        if ($field['name'] == $field_name && isset($field['choices'])) {
-                            if (!$multi) return $field['choices'];
-                            else $results [] = $field;
-                        }
-                    }
-                }
-            }
-        }
+
+		// Let us try going through the ACF registered post types
+		if ( empty($results) ) {
+			$acf_posts = get_posts( array('post_type' => 'acf', 'posts_per_page' => -1, 'post_status' => 'all') );
+			if ( !is_wp_error($acf_posts) ) {
+				foreach ($acf_posts as $acf) {
+					$meta = get_post_meta($acf->ID);
+					foreach ($meta as $key => $field) {
+						if (substr($key, 0, 6) == 'field_') {
+							$field = unserialize($field[0]);
+							if ($field['name'] == $field_name && isset($field['choices'])) {
+								if (!$multi) return $field['choices'];
+								else $results [] = $field;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Still no luck? Get the field key, then try to get the choices
+		if ( empty($results) ) {
+			$fkey = asp_acf_get_field_key($field_name);
+			if ( !empty($fkey) ) {
+				$field = get_field_object($fkey);
+				if ( !empty($field['choices']) ) {
+					return $field['choices'];
+				}
+			}
+		}
+
         return $results;
     }
+}
+if ( !function_exists("asp_acf_get_field_key") ) {
+	function asp_acf_get_field_key( $field_name, $s ) {
+		global $wpdb;
+		$acf_fields = $wpdb->get_results( $wpdb->prepare( "SELECT ID,post_parent,post_name FROM $wpdb->posts WHERE post_excerpt=%s AND post_type=%s" , $field_name , 'acf-field' ) );
+		// get all fields with that name.
+		switch ( count( $acf_fields ) ) {
+			case 0: // no such field
+				return false;
+			case 1: // just one result.
+				return $acf_fields[0]->post_name;
+            default:
+                $last = end($acf_fields);
+                return isset($last->post_name) ? $last->post_name : false;
+
+		}
+		// ASP note: The code does not ever get below, as the Post ID is never known
+
+        // Rest of the code for possible future use
+        $post_id = 0; // // ASP note: This was passed as the function argument
+		// result is ambiguous
+		// get IDs of all field groups for this post
+		$field_groups_ids = array();
+		$field_groups = acf_get_field_groups( array(
+			'post_id' => $post_id,
+		) );
+		foreach ( $field_groups as $field_group )
+			$field_groups_ids[] = $field_group['ID'];
+
+		// Check if field is part of one of the field groups
+		// Return the first one.
+		foreach ( $acf_fields as $acf_field ) {
+			if ( in_array($acf_field->post_parent,$field_groups_ids) )
+				return $acf_field->post_name;
+		}
+		return false;
+	}
 }
 
 

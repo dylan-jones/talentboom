@@ -59,6 +59,7 @@ defined('ABSPATH') or die("You can't access this file directly.");
     "pshowdesc": "<?php echo ((isset($style['pshowdesc']) && $style['pshowdesc']!="")?$style['pshowdesc']:1); ?>",
     "closeOnDocClick": <?php echo w_isset_def($style['close_on_document_click'], 1); ?>,
     "iifNoImage": "<?php echo w_isset_def($style['i_ifnoimage'], 'description'); ?>",
+    "iiPagination": <?php echo $style['i_pagination']; ?>,
     "iiRows": <?php echo w_isset_def($style['i_rows'], 2); ?>,
     "iiGutter": <?php echo w_isset_def($style['i_item_margin'], 10); ?>,
     "iitemsWidth": "<?php echo is_numeric($style['i_item_width']) ? $style['i_item_width'].'px' : $style['i_item_width']; ?>",
@@ -70,9 +71,11 @@ defined('ABSPATH') or die("You can't access this file directly.");
     "analytics": <?php echo w_isset_def($ana_options['analytics'], 0); ?>,
     "analyticsString": "<?php echo w_isset_def($ana_options['analytics_string'], ""); ?>",
     "show_more": {
+        "enabled": <?php echo $style['showmoreresults']; ?>,
         "url": "<?php echo apply_filters( "asp_show_more_url", $style['more_redirect_url'] ); ?>",
         "action": "<?php echo $style['more_results_action']; ?>",
-        "location": "<?php echo $style['more_redirect_location']; ?>"
+        "location": "<?php echo $style['more_redirect_location']; ?>",
+        "infinite": <?php echo $style['more_results_infinite'] == 1 && $style['more_results_action'] == 'ajax' ? 1 : 0; ?>
     },
     "mobile": {
         "trigger_on_type": <?php echo $style['mob_trigger_on_type']; ?>,

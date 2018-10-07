@@ -55,6 +55,6 @@
 
       <nav class="mobile-nav" role="navigation">
         <?php mobile_nav(); ?>
-        <a href="<?php echo home_url(); ?>" class="btn btn-primary call-to-action">I'm looking to hire talent</a>
+        <a href="<?php echo home_url(); ?>/contact-us#looking-for-talent" class="btn btn-primary call-to-action">I'm looking to hire talent</a>
       </nav>
 			<!-- /header -->

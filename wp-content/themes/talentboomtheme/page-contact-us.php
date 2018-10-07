@@ -11,14 +11,14 @@
       <div class="form-tabs">
         <div class="container">
           <ul class="tabs">
-            <li class="tab-link" data-tab="tab-1">I’m looking to hire staff</li>
-            <li class="tab-link" data-tab="tab-2">I’m looking for work</li>
+            <li class="tab-link" data-tab="looking-for-talent">I’m looking to hire staff</li>
+            <li class="tab-link" data-tab="looking-for-work">I’m looking for work</li>
           </ul>
-          <div id="tab-1" class="tab-content">
-            <?php echo do_shortcode('[contact-form-7 id="31" title="Hire Staff Form"]'); ?>
+          <div id="looking-for-talent" class="tab-content looking-for-talent">
+            <?php echo do_shortcode('[contact-form-7 title="Hire Staff Form"]'); ?>
           </div>
-          <div id="tab-2" class="tab-content">
-            <?php echo do_shortcode('[contact-form-7 id="32" title="Looking for Work Form"]'); ?>
+          <div id="looking-for-work" class="tab-content looking-for-work">
+            <?php echo do_shortcode('[contact-form-7 title="Looking for Work Form"]'); ?>
           </div>
         </div>
         <div class="select-info">

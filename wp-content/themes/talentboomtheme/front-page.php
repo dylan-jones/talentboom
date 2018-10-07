@@ -20,7 +20,7 @@
             </div>
             <div class="hidden">
               Great! We have an awesome network of Senior to Key Executive talent and matching ability to help find you game changing talent wherever you are in the world. 
-              <a href="#">Lets get started!</a>
+              <a href="<?php echo home_url(); ?>/contact-us#looking-for-talent">Lets get started!</a>
             </div>
           </div>
           <div class="box">
@@ -29,7 +29,7 @@
             </div>
             <div class="hidden">
               Great! We have an awesome network of Senior to Key Executive talent and matching ability to help find you game changing talent wherever you are in the world. 
-              <a href="#">Lets get started!</a>
+              <a href="<?php echo home_url(); ?>/contact-us#looking-for-work">Lets get started!</a>
             </div>
           </div>
         </div>
@@ -61,10 +61,6 @@
             <div class="loader"></div>
           </div>
 
-           <?php /* 
-          <div class="form"><?php echo do_shortcode('[wpdreams_ajaxsearchpro id=1]'); ?></div>
-          <div class="form-results"><?php echo do_shortcode('[wpdreams_ajaxsearchpro_results id=1 element="div"]'); ?></div>
-          */?>
         </div>
       </div>
       <div class="about-section">
@@ -75,7 +71,7 @@
           <div class="content">
             <h3>About Us & Our <br />Global Connections</h3>
             <div class="light-bulb">
-              <img src="<?php echo get_template_directory_uri(); ?>/app/img/light-bulb.svg" alt="">
+              <?php get_template_part('/app/img/inline', 'light-bulb.svg'); ?>
             </div>
             <p>Focusing heavily across the globe from Africa, US, Asia, Europe & beyond, we represent key executive to board level talent across the Creative, Digital, Advertising and Sports world. Find out how we can find talent for your business as your virtual recruitment neighbour.</p>
             <a href="<?php echo home_url(); ?>/global-connections" class="btn btn-primary">Read More</a>

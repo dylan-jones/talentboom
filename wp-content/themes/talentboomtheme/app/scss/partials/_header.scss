@@ -272,8 +272,62 @@
         }
       }
 
+      &.menu-item-has-children {
+        padding-right: 4rem;
+
+        &:before {
+          content: '';
+          width: 2rem;
+          height: 3rem;
+          background: {
+            image: url('../img/tile.svg');
+            repeat: no-repeat;
+            position: center center;
+            size: contain;
+          }
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition: rotate 0.4s ease;
+        }
+
+        &.current_page_item,
+        &:hover {
+          a {
+            color: $dark-green;
+          }
+
+          &:after {
+            display: none;
+          }
+
+          &:before {
+            transform: rotate(180deg);
+          }
+        }
+
+        &:hover {
+          .sub-menu {
+            max-height: 999rem;
+            transition: max-height 0.4s ease;
+          }
+        }
+      }
+
       .sub-menu {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        margin: 1rem -4rem 0 0;
+
+        li {
+          margin-bottom: 1rem;
+
+          a {
+            font-weight: normal;
+            text-transform: none;
+            color: $black !important;
+          }
+        }
       }
     }
   }

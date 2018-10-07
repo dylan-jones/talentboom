@@ -15,6 +15,10 @@
       background-color: $dark-green;
       color: $white;
     }
+
+    @include breakpoint($laptop) {
+      font-size: 2.4rem;
+    }
   }
 
   &-outline {
@@ -27,6 +31,10 @@
     &:hover {
       background-color: $lumo-green;
       color: $white;
+    }
+
+    @include breakpoint($laptop) {
+      font-size: 2.4rem;
     }
   }
 }

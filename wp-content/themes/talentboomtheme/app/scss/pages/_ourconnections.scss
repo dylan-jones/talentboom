@@ -206,6 +206,7 @@
   display: block;
   position: absolute;
   cursor: pointer;
+  animation: pulse 2s ease infinite;
   background: {
     image: url(../img/pin.svg);
     repeat: no-repeat;

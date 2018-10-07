@@ -33,12 +33,6 @@ $(document).ready(function(){
             beforeSend:function(response){
                 $('.form-results').addClass('in-progress');
             },
-            /*success:function(response){
-                $('#results').append('response');
-                $('.form-results').addClass('is-active');
-                $('.form-results').removeClass('in-progress');
-                console.log('success');
-            }*/
             success : function(response) {
                 jobform.find("#results").empty();
                 if(response) {
@@ -53,8 +47,8 @@ $(document).ready(function(){
                     }
                     console.log('success');
                 } else {
-                    var html  = "<li class='no-result'>No matching movies found. Try a different filter or search keyword</li>";
-                    jobform.find("ul").append(html);
+                    var html  = "No matching jobs found.";
+                    jobform.find("#results").append(html);
                 }
             }
         });

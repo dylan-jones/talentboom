@@ -1,7 +1,45 @@
+/*------------------------------------*\
+    CUSTOM ANIMATIONS
+\*------------------------------------*/
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flamin {
+  from,
+  50%,
+  to {
+    transform: skew(4deg,1deg) scale(1.05,1.05);
+  }
+
+  25%,
+  75% {
+    transform: skew(0, 0) scale(1,1);
+  }
+}
+
+/*------------------------------------*\
+    ANIMATING ITEMS
+\*------------------------------------*/
+
 .matches-svg {
   #flame {
-    animation: rubberBand 5s ease infinite;
-    transform-origin: center right;
+    animation: flamin 5s ease infinite;
+    transform-origin: 0 -20rem;
   }
 
   #line_right_top {
@@ -32,5 +70,13 @@
   #line_left_bottom {
     animation: flash 2s ease-in-out infinite;
     animation-delay: 0.4s;
+  }
+}
+
+.light-bulb {
+  svg {
+    .spark {
+      animation: flash 2s ease-in-out infinite;
+    }
   }
 }

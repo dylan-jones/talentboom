@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.196 33.39">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #22e0a6;
-      }
-
-      .cls-2 {
-        fill: #158677;
-      }
-    </style>
-  </defs>
-  <g id="Group_2001" data-name="Group 2001" transform="translate(-928 -1860.41)">
-    <path id="Path_3145" data-name="Path 3145" class="cls-1" d="M13.6,0A13.6,13.6,0,0,0,0,13.6c0,8.65,9.113,16.731,12.423,19.365a1.829,1.829,0,0,0,2.349,0C18.083,30.329,27.2,22.212,27.2,13.6A13.551,13.551,0,0,0,13.6,0Z" transform="translate(928 1860.41)"/>
-    <circle id="Ellipse_19" data-name="Ellipse 19" class="cls-2" cx="8.009" cy="8.009" r="8.009" transform="translate(933.04 1881.463) rotate(-85.935)"/>
-  </g>
-</svg>
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNy4xOTYgMzMuMzkiPg0KICA8ZGVmcz4NCiAgICA8c3R5bGU+DQogICAgICAuY2xzLTEgew0KICAgICAgICBmaWxsOiAjMjJlMGE2Ow0KICAgICAgfQ0KDQogICAgICAuY2xzLTIgew0KICAgICAgICBmaWxsOiAjMTU4Njc3Ow0KICAgICAgfQ0KICAgIDwvc3R5bGU+DQogIDwvZGVmcz4NCiAgPGcgaWQ9Ikdyb3VwXzIwMDEiIGRhdGEtbmFtZT0iR3JvdXAgMjAwMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTkyOCAtMTg2MC40MSkiPg0KICAgIDxwYXRoIGlkPSJQYXRoXzMxNDUiIGRhdGEtbmFtZT0iUGF0aCAzMTQ1IiBjbGFzcz0iY2xzLTEiIGQ9Ik0xMy42LDBBMTMuNiwxMy42LDAsMCwwLDAsMTMuNmMwLDguNjUsOS4xMTMsMTYuNzMxLDEyLjQyMywxOS4zNjVhMS44MjksMS44MjksMCwwLDAsMi4zNDksMEMxOC4wODMsMzAuMzI5LDI3LjIsMjIuMjEyLDI3LjIsMTMuNkExMy41NTEsMTMuNTUxLDAsMCwwLDEzLjYsMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkyOCAxODYwLjQxKSIvPg0KICAgIDxjaXJjbGUgaWQ9IkVsbGlwc2VfMTkiIGRhdGEtbmFtZT0iRWxsaXBzZSAxOSIgY2xhc3M9ImNscy0yIiBjeD0iOC4wMDkiIGN5PSI4LjAwOSIgcj0iOC4wMDkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkzMy4wNCAxODgxLjQ2Mykgcm90YXRlKC04NS45MzUpIi8+DQogIDwvZz4NCjwvc3ZnPg0K"

@@ -2,7 +2,9 @@ const path = require('path');
 var webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 var sitename = 'thetalentboom';
 
@@ -13,12 +15,20 @@ module.exports = {
     jobsearch: './app/jobsearch.js'
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].min.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  resolve: {
+    extensions: ['.js']
   },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist'
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({})
+    ]
   },
   module: {
     rules: [ 
@@ -38,7 +48,8 @@ module.exports = {
             {loader: 'postcss-loader', options: {sourceMap: true}},
             {loader: 'sass-loader', options: {sourceMap: true}}
           ]
-        })
+        }),
+        exclude: /node_modules/
       },
       {
         test: /\.js$/,
@@ -56,10 +67,23 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,  
+        use: [
+          {
+            loader: 'url-loader',
+            options: { 
+              limit: 8000, // Convert images < 8kb to base64 strings
+              name: 'img/[name].[ext]'
+            } 
+          }
+        ]
       }
     ]
   },
   plugins: [
+    new BundleAnalyzerPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'

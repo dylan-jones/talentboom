@@ -4,7 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 var sitename = 'thetalentboom';
 
@@ -67,23 +66,10 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /\.(png|jp(e*)g|svg)$/,  
-        use: [
-          {
-            loader: 'url-loader',
-            options: { 
-              limit: 8000, // Convert images < 8kb to base64 strings
-              name: 'img/[name].[ext]'
-            } 
-          }
-        ]
       }
     ]
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'

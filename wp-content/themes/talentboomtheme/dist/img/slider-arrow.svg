@@ -1,1 +1,14 @@
-module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMS4xNDggMzcuMjk3Ij4NCiAgPGRlZnM+DQogICAgPHN0eWxlPg0KICAgICAgLmNscy0xIHsNCiAgICAgICAgZmlsbDogbm9uZTsNCiAgICAgICAgc3Ryb2tlOiAjZmZmOw0KICAgICAgICBzdHJva2UtbGluZWNhcDogcm91bmQ7DQogICAgICAgIHN0cm9rZS1saW5lam9pbjogcm91bmQ7DQogICAgICAgIHN0cm9rZS13aWR0aDogNXB4Ow0KICAgICAgfQ0KICAgIDwvc3R5bGU+DQogIDwvZGVmcz4NCiAgPHBhdGggaWQ9IlBhdGhfMjg3OSIgZGF0YS1uYW1lPSJQYXRoIDI4NzkiIGNsYXNzPSJjbHMtMSIgZD0iTTEyMDYuOTk0LDExMTkuNWwxNi4xNDgsMTYuMTQ4LDE2LjE0OC0xNi4xNDgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTE3IDEyNDEuNzkxKSByb3RhdGUoLTkwKSIvPg0KPC9zdmc+DQo="
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.148 37.297">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <path id="Path_2879" data-name="Path 2879" class="cls-1" d="M1206.994,1119.5l16.148,16.148,16.148-16.148" transform="translate(-1117 1241.791) rotate(-90)"/>
+</svg>

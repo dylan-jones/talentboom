@@ -1,1 +1,22 @@
-module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTQuMzI1IDEzNS4wMiI+DQogIDxkZWZzPg0KICAgIDxzdHlsZT4NCiAgICAgIC5jbHMtMSwgLmNscy0yIHsNCiAgICAgICAgZmlsbDogbm9uZTsNCiAgICAgICAgc3Ryb2tlOiAjNTg2MjZmOw0KICAgICAgICBzdHJva2UtbGluZWNhcDogcm91bmQ7DQogICAgICAgIHN0cm9rZS1saW5lam9pbjogcm91bmQ7DQogICAgICAgIHN0cm9rZS13aWR0aDogNXB4Ow0KICAgICAgfQ0KDQogICAgICAuY2xzLTEgew0KICAgICAgICBzdHJva2UtbWl0ZXJsaW1pdDogMTA7DQogICAgICAgIHN0cm9rZS1kYXNoYXJyYXk6IDEwOw0KICAgICAgfQ0KICAgIDwvc3R5bGU+DQogIDwvZGVmcz4NCiAgPGcgaWQ9Ikdyb3VwXzIwMTMiIGRhdGEtbmFtZT0iR3JvdXAgMjAxMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExNTcuMTM5IC03MzYuMDU1KSI+DQogICAgPHBhdGggaWQ9IlBhdGhfMzEzOSIgZGF0YS1uYW1lPSJQYXRoIDMxMzkiIGNsYXNzPSJjbHMtMSIgZD0iTTAsMTMwLjAySDE5LjQ0NEE3NC44NjYsNzQuODY2LDAsMCwwLDk0LjMyMyw1NS4xNDFWMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTE1OS42MzkgNzM4LjU1NSkiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF8zMTQwIiBkYXRhLW5hbWU9IlBhdGggMzE0MCIgY2xhc3M9ImNscy0yIiBkPSJNMTcwMy42OTMsNzYyLjE4MmwxNS4zNjgtMTUuMzY4LDE1LjM2OCwxNS4zNjgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00NjUuNDY3IC04KSIvPg0KICA8L2c+DQo8L3N2Zz4NCg=="
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.325 135.02">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #58626f;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-1 {
+        stroke-miterlimit: 10;
+        stroke-dasharray: 10;
+      }
+    </style>
+  </defs>
+  <g id="Group_2013" data-name="Group 2013" transform="translate(-1157.139 -736.055)">
+    <path id="Path_3139" data-name="Path 3139" class="cls-1" d="M0,130.02H19.444A74.866,74.866,0,0,0,94.323,55.141V0" transform="translate(1159.639 738.555)"/>
+    <path id="Path_3140" data-name="Path 3140" class="cls-2" d="M1703.693,762.182l15.368-15.368,15.368,15.368" transform="translate(-465.467 -8)"/>
+  </g>
+</svg>

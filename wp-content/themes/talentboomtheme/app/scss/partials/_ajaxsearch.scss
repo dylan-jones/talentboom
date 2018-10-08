@@ -148,14 +148,10 @@
     padding: 5rem;
     border-radius: 1.5rem;
     background: $background-grey;
-
-    .loader {
-      display: block; 
-    }
   }
 
   .loader {
-    display: none;
+    display: block;
     width: 4rem;
     height: 4rem;
     position: absolute;

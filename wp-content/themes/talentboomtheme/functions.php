@@ -412,11 +412,10 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
 // Shortcodes
-add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
-add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
+add_shortcode('blogsidebar', 'blogsidebar'); 
 
 // Shortcodes above would be nested like this -
-// [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
+// [blogsidebar] Content Here [/blogsidebar]
 
 /*------------------------------------*\
     Custom Post Type Jobs
@@ -435,7 +434,7 @@ function cptui_register_my_cpts_job() {
         "public" => false,
         "publicly_queryable" => true,
         "show_ui" => true,
-        "show_in_rest" => false,
+        "show_in_rest" => true,
         "rest_base" => "",
         "has_archive" => false,
         "show_in_menu" => true,
@@ -493,16 +492,9 @@ add_action( 'init', 'cptui_register_my_cpts_connection' );
 	ShortCode Functions
 \*------------------------------------*/
 
-// Shortcode Demo with Nested Capability
-function html5_shortcode_demo($atts, $content = null)
+function blogsidebar($atts, $content = null)
 {
-    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
-}
-
-// Shortcode Demo with simple <h2> tag
-function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-{
-    return '<h2>' . $content . '</h2>';
+    return '<div class="sidebar">' . $content . '</div>'; // do_shortcode allows for nested Shortcodes
 }
 
 /*------------------------------------*\
@@ -544,15 +536,36 @@ add_filter( 'the_content', 'add_share_buttons_after_content' );
     Custom Search
 \*------------------------------------*/
 
+add_filter( 'pre_get_posts', 'tgm_io_cpt_search' );
+/**
+ * This function modifies the main WordPress query to include an array of 
+ * post types instead of the default 'post' post type.
+ *
+ * @param object $query  The original query.
+ * @return object $query The amended query.
+ */
+function tgm_io_cpt_search( $query ) {
+    if ( $query->is_search ) {
+    $query->set( 'post_type', array( 'post', 'job' ) );
+    }
+    
+    return $query;
+}
+
+
 add_action('wp_ajax_nopriv_tb_job_search', 'tb_job_search');
 add_action('wp_ajax_tb_job_search', 'tb_job_search');
+
 function tb_job_search(){
-  header("Content-Type: application/json"); 
+
+    global $wp_query;
+    
+    header("Content-Type: application/json"); 
  
     $meta_query = array('relation' => 'AND');
  
-    if(isset($_GET['duration'])) {
-        $duration = sanitize_text_field( $_GET['duration'] );
+    if(isset($_POST['duration'])) {
+        $duration = sanitize_text_field( $_POST['duration'] );
         $meta_query[] = array(
             'key' => 'duration',
             'value' => $duration,
@@ -560,12 +573,12 @@ function tb_job_search(){
         );
     }
  
-    if(isset($_GET['location'])) {
-        $location = sanitize_text_field( $_GET['location'] );
+    if(isset($_POST['location'])) {
+        $location = sanitize_text_field( $_POST['location'] );
         $meta_query[] = array(
             'key' => 'location',
             'value' => $location,
-            'compare' => '='
+            'compare' => 'LIKE'
         );
     }
 
@@ -575,12 +588,13 @@ function tb_job_search(){
         'meta_query' => $meta_query
     );
  
-    if(isset($_GET['title'])) {
-        $title = sanitize_text_field( $_GET['title'] );
+    if(isset($_POST['search'])) {
+        $search = sanitize_text_field( $_POST['search'] );
         $search_query = new WP_Query( array(
             'post_type' => 'job',
             'posts_per_page' => -1,
-            's' => $title
+            'meta_query' => $meta_query,
+            's' => $search
         ) );
     } else {
         $search_query = new WP_Query( $args );

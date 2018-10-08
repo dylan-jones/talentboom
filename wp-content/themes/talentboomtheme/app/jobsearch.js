@@ -6,32 +6,35 @@ $(document).ready(function(){
     form.submit(function(e){
         e.preventDefault();
 
-        if(form.find('#jobDuration').val().length !== 0) {
-            var jobduration = form.find('#jobDuration').val();
+        if(form.find('#duration').val().length !== 0) {
+            var duration = form.find('#duration').val();
             console.log('found duration');
         }
 
-        if(form.find('#jobLocation').val().length !== 0) {
-            var joblocation = form.find('#jobLocation').val();
+        if(form.find('#location').val().length !== 0) {
+            var location = form.find('#location').val();
             console.log('found location');
         }
 
-        if(form.find('#jobTitle').val().length !== 0) {
-            var jobtitle = form.find('#jobTitle').val();
+        if(form.find('#search').val().length !== 0) {
+            var search = form.find('#search').val();
             console.log('found title');
         }
 
+        var data = {
+            action: 'tb_job_search', 
+            duration : duration,
+            location : location,
+            search : search
+        }
+
         $.ajax({
-            type:"POST",
+            type: "POST",
             url: "./wp-admin/admin-ajax.php",
-            data: {
-                action: 'tb_job_search', 
-                duration : jobduration,
-                location : joblocation,
-                title : jobtitle
-            },
+            data: data,
             beforeSend:function(response){
                 $('.form-results').addClass('in-progress');
+                jobform.find("#results").empty().append('<div class="loader"></div>');
             },
             success : function(response) {
                 jobform.find("#results").empty();
@@ -50,6 +53,10 @@ $(document).ready(function(){
                     var html  = "No matching jobs found.";
                     jobform.find("#results").append(html);
                 }
+            },
+            fail: function(xhr, textStatus, errorThrown){
+                var html  = "Error";
+                jobform.find("#results").append(html);
             }
         });
     });

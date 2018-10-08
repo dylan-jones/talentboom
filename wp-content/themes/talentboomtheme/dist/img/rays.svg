@@ -1,1 +1,19 @@
-module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDIgNzciPg0KICA8ZGVmcz4NCiAgICA8c3R5bGU+DQogICAgICAuY2xzLTEgew0KICAgICAgICBmaWxsOiAjMTU4Njc3Ow0KICAgICAgfQ0KICAgIDwvc3R5bGU+DQogIDwvZGVmcz4NCiAgPGcgaWQ9Ikdyb3VwXzIwMTMiIGRhdGEtbmFtZT0iR3JvdXAgMjAxMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE2NDggLTguNSkiPg0KICAgIDxyZWN0IGlkPSJSZWN0YW5nbGVfNjg5IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA2ODkiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjQiIHJ4PSIyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjQ4IDQ1KSIvPg0KICAgIDxyZWN0IGlkPSJSZWN0YW5nbGVfNjk3IiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA2OTciIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjQiIHJ4PSIyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxODUwLjczMiAxMC44MDQpIHJvdGF0ZSgxMjApIi8+DQogICAgPHJlY3QgaWQ9IlJlY3RhbmdsZV82OTkiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDY5OSIgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTIiIGhlaWdodD0iNCIgcng9IjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2ODguMjY4IDgzLjE4Nykgcm90YXRlKC02MCkiLz4NCiAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzY5OCIgZGF0YS1uYW1lPSJSZWN0YW5nbGUgNjk4IiBjbGFzcz0iY2xzLTEiIHdpZHRoPSIxMiIgaGVpZ2h0PSI0IiByeD0iMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTg0Ny4yNjggODUuMTk2KSByb3RhdGUoLTEyMCkiLz4NCiAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzcwMCIgZGF0YS1uYW1lPSJSZWN0YW5nbGUgNzAwIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSIxMiIgaGVpZ2h0PSI0IiByeD0iMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY5MS43MzIgOC43OTQpIHJvdGF0ZSg2MCkiLz4NCiAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzY5MCIgZGF0YS1uYW1lPSJSZWN0YW5nbGUgNjkwIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSIxMiIgaGVpZ2h0PSI0IiByeD0iMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTg3OCA0NSkiLz4NCiAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzY5MSIgZGF0YS1uYW1lPSJSZWN0YW5nbGUgNjkxIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSIxMiIgaGVpZ2h0PSI0IiByeD0iMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTc3MS41IDczLjUpIHJvdGF0ZSg5MCkiLz4NCiAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzY5MiIgZGF0YS1uYW1lPSJSZWN0YW5nbGUgNjkyIiBjbGFzcz0iY2xzLTEiIHdpZHRoPSIxMiIgaGVpZ2h0PSI0IiByeD0iMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTc3MS41IDguNSkgcm90YXRlKDkwKSIvPg0KICA8L2c+DQo8L3N2Zz4NCg=="
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242 77">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #158677;
+      }
+    </style>
+  </defs>
+  <g id="Group_2013" data-name="Group 2013" transform="translate(-1648 -8.5)">
+    <rect id="Rectangle_689" data-name="Rectangle 689" class="cls-1" width="12" height="4" rx="2" transform="translate(1648 45)"/>
+    <rect id="Rectangle_697" data-name="Rectangle 697" class="cls-1" width="12" height="4" rx="2" transform="translate(1850.732 10.804) rotate(120)"/>
+    <rect id="Rectangle_699" data-name="Rectangle 699" class="cls-1" width="12" height="4" rx="2" transform="translate(1688.268 83.187) rotate(-60)"/>
+    <rect id="Rectangle_698" data-name="Rectangle 698" class="cls-1" width="12" height="4" rx="2" transform="translate(1847.268 85.196) rotate(-120)"/>
+    <rect id="Rectangle_700" data-name="Rectangle 700" class="cls-1" width="12" height="4" rx="2" transform="translate(1691.732 8.794) rotate(60)"/>
+    <rect id="Rectangle_690" data-name="Rectangle 690" class="cls-1" width="12" height="4" rx="2" transform="translate(1878 45)"/>
+    <rect id="Rectangle_691" data-name="Rectangle 691" class="cls-1" width="12" height="4" rx="2" transform="translate(1771.5 73.5) rotate(90)"/>
+    <rect id="Rectangle_692" data-name="Rectangle 692" class="cls-1" width="12" height="4" rx="2" transform="translate(1771.5 8.5) rotate(90)"/>
+  </g>
+</svg>

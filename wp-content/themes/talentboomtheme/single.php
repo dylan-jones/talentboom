@@ -20,14 +20,6 @@
 						<div class="content">
 							<?php the_content(); // Dynamic Content ?>
 						</div>
-						<div class="sidebar">
-							<div>
-								<img src="http://placehold.it/290x290">
-							</div>
-							<div>
-								<img src="http://placehold.it/290x290">
-							</div>
-						</div>
 					</article>
 
 				<?php endwhile; ?>

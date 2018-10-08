@@ -3,43 +3,58 @@
     <section>
       <div class="container">
         <div class="blog-featured">
-          <?php 
-            $args = array(
-              'post_type' => 'post',
-              'posts_per_page'=> 2
-            );
-          $the_query = new WP_Query( $args ); ?>
-          <?php if ( $the_query->have_posts() ) : ?>
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-              <?php if ( has_post_thumbnail() ) {
-                  $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-                } else {
-                  
-                } ?>
-              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image: url('<?php echo $feat_image; ?>'); ">
-                <div class="content">
-                  <span class="date"><?php the_time('F j, Y'); ?></span>
-                  <h3><?php the_title(); ?></h3>
-                  <div class="category"><?php _e( '', 'html5blank' ); the_category(', '); ?></div>
-                  <a href="<?php the_permalink(); ?>" class="read-more">Read Post</a>
-                </div>
-              </article>
-            <?php endwhile; ?>
-
-            <?php wp_reset_postdata(); ?>
+          <?php if ($paged >= 2) : ?>
             <?php else : ?>
-              <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
+            <?php 
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page'=> 2
+              );
+            $the_query = new WP_Query( $args ); ?>
+            <?php if ( $the_query->have_posts() ) : ?>
+              <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                <?php if ( has_post_thumbnail() ) {
+                    $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+                  } else {
+                    
+                  } ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image: url('<?php echo $feat_image; ?>'); ">
+                  <div class="content">
+                    <span class="date"><?php the_time('F j, Y'); ?></span>
+                    <h3><?php the_title(); ?></h3>
+                    <div class="category"><?php _e( '', 'html5blank' ); the_category(', '); ?></div>
+                    <a href="<?php the_permalink(); ?>" class="read-more">Read Post</a>
+                  </div>
+                </article>
+              <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?>
+              <?php else : ?>
+              <?php endif; ?>
+            
             <?php endif; ?>
+
         </div>
         <div class="blog-loop">
-          <?php 
-            $args = array(
-              'post_type' => 'post',
-              'offset' => 2,
-              'posts_per_page'=> 3,
-              'paged' => $paged
-            );
+
+          <?php
+            if ( $paged >= 2 ){
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page'=> 9,
+                'offset' => '8',
+                'paged' => $paged
+              );
+            } else {
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page'=> 6,
+                'offset' => '2',
+                'paged' => $paged
+              );
+            }
             $the_query = new WP_Query( $args ); ?>
+            
             <?php if ( $the_query->have_posts() ) : ?>
               <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -139,6 +139,11 @@ function html5blank_conditional_scripts()
         wp_register_script('jobscript', get_template_directory_uri() . '/dist/jobsearch.min.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('jobscript'); // Enqueue it!
     }
+
+    if (is_page('contact-us')) {
+        wp_register_script('contactscript', get_template_directory_uri() . '/dist/contactform.min.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('contactscript'); // Enqueue it!
+    }
 }
 
 // Load HTML5 Blank styles

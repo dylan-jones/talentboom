@@ -90,9 +90,6 @@ wp-content/*
 !wp-content/themes/
 !wp-content/uploads/
 
-#Ignore DIST folder
-/dist
-
 # ignore these plugins from the core
 wp-content/plugins/hello.php
 wp-content/plugins/akismet/

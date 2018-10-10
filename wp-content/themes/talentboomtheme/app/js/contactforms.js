@@ -1,8 +1,14 @@
 $(document).ready(function(){
 
-  var urlHash = window.location.hash.replace("#", "");
+  if(window.location.hash) {
+    var urlHash = window.location.hash.replace("#", "");
+    $("."+urlHash).addClass('is-active');
 
-  $("."+urlHash).addClass('is-active');
+    window.scrollTo({
+      top: 1000,
+      behavior: "smooth"
+    });
+  }
 
   if ( $('.tab-content').hasClass( "is-active" ) ) {
     $('.select-info').addClass('hide-it');

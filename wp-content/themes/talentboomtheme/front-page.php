@@ -8,10 +8,11 @@
         <div class="container">
           <div class="content">
             <?php get_template_part('/app/img/inline', 'matches.svg'); ?>
-            <p>Hello! We are a global digital & creative recruiting firm. We make matches between advertising agencies and creative departments of large corporates with elite talent worldwide.</p>
+            <?php the_field('intro_copy'); ?>
           </div>
         </div>
       </div>
+      <?php /*
       <div class="large-buttons-top">
         <div class="container">
           <div class="box">
@@ -20,7 +21,7 @@
             </div>
             <div class="hidden">
               Great! We have an awesome network of Senior to Key Executive talent and matching ability to help find you game changing talent wherever you are in the world. 
-              <a href="<?php echo home_url(); ?>/contact-us#looking-for-talent">Lets get started!</a>
+              <a href="<?php echo home_url(); ?>/contact-us#looking-for-work">Lets get started!</a>
             </div>
           </div>
           <div class="box">
@@ -34,6 +35,30 @@
           </div>
         </div>
       </div>
+      */ ?>
+
+      <?php if( have_rows('big_boxes') ): ?>
+        <div class="large-buttons-top">
+          <div class="container">
+            <?php while( have_rows('big_boxes') ): the_row(); 
+
+              $title = get_sub_field('title');
+              $content = get_sub_field('content');
+              $link = get_sub_field('link');
+              ?>
+              <div class="box">
+                <div class="landing">
+                  <h3><?php echo $title; ?></h3>
+                </div>
+                <div class="hidden">
+                  <?php echo $content; ?>
+                  <a href="<?php echo home_url(); ?>/contact-us#<?php echo $link; ?>">Lets get started!</a>
+                </div>
+              </div>
+            <?php endwhile; ?>
+          </div>
+        </div>
+      <?php endif; ?>
       <div class="job-search-bar">
         <div class="container">
           <h3>Quick Job Search</h3>
@@ -67,12 +92,12 @@
         </div>
         <div class="container">
           <div class="content">
-            <h3>About Us & Our <br />Global Connections</h3>
+            <?php the_field('global_connections_content'); ?>
+            
             <div class="light-bulb">
               <?php get_template_part('/app/img/inline', 'light-bulb.svg'); ?>
             </div>
-            <p>Focusing heavily across the globe from Africa, US, Asia, Europe & beyond, we represent key executive to board level talent across the Creative, Digital, Advertising and Sports world. Find out how we can find talent for your business as your virtual recruitment neighbour.</p>
-            <a href="<?php echo home_url(); ?>/global-connections" class="btn btn-primary">Read More</a>
+            <a href="<?php echo home_url(); ?>/about-us" class="btn btn-primary">Read More</a>
           </div>
         </div>
       </div>
@@ -101,10 +126,10 @@
           <h3>Our Global Connections</h3>
           <div class="connections-blocks">
             <ul class="locations">
-              <li><a href="<?php echo home_url(); ?>/connection/africa">Africa</a></li>
-              <li><a href="<?php echo home_url(); ?>/connection/asia">Asia</a></li>
               <li><a href="<?php echo home_url(); ?>/connection/europe">Europe</a></li>
               <li><a href="<?php echo home_url(); ?>/connection/usa">USA</a></li>
+              <li><a href="<?php echo home_url(); ?>/connection/middle-ease-and-africa">Middle East &amp; Africa</a></li>
+              <li><a href="<?php echo home_url(); ?>/connection/asia">Asia</a></li>
             </ul>
           </div>
         </div>

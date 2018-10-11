@@ -61,6 +61,7 @@
     display: inline-block;
     margin-right: 1.5rem;
     vertical-align: text-top;
+    flex-shrink: 0;
 
     @include breakpoint($laptop) {
       width: 2.9rem;

@@ -32,22 +32,40 @@
       justify-content: space-between;
 
       li {
+        width: 49%;
         list-style: none;
-        width: 48%;
-        margin-bottom: 1.2rem;
-        border: 3px solid rgba($primary-blue, 0.14);
-        height: 18.2rem;
+        padding: 0;
+        margin-bottom: 2%;
+        border: 3px solid rgba($primary-blue, 0.13);
+        height: 7.2rem;
         background-color: $white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
+        position: relative;
+        
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          max-width: 80%;
+          max-height: 70%;
+        }
+
+        @include breakpoint($mobile) {
+          height: 10.2rem;
+        }
 
         @include breakpoint($tablet) {
-          width: 32%;
+          width: 24%;
+          height: 12.2rem;
         }
 
         @include breakpoint($laptop) {
-          width: 24%;
+          height: 16.2rem;
+        }
+
+        @include breakpoint($desktop) {
+          height: 18.2rem;
         }
       }
     }

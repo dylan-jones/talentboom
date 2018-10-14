@@ -17,11 +17,11 @@
 .global-positions .intro-section {
   .image {
     @include breakpoint($tablet) {
-      transform: translate(86rem,-33rem);
+      transform: translate(71rem,-33rem);
     }
 
-    @include breakpoint($tablet) {
-      transform: translate(86rem,-45rem);
+    @include breakpoint($laptop) {
+      transform: translate(79rem,-33rem);
     }
   }
 }

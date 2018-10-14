@@ -8,11 +8,14 @@
   }
 
   .form-tabs {
-    padding: 4rem 0 6rem;
+    padding: 4rem 0 0;
     position: relative;
+    margin-top: 10rem;
 
     @include breakpoint($tablet) {
       min-height: 35rem;
+      padding: 4rem 0 6rem;
+      margin-top: 0;
     }
 
     @include breakpoint($laptop) {
@@ -36,7 +39,7 @@
         font-size: responsive 2.4rem 4.8rem;
         color: $white;
         text-align: center;
-        padding: 0.6rem 5rem;
+        padding: 0.6rem 3rem;
         margin: 0 3rem;
         background-color: #93C1B3;
         font-family: "cortado";
@@ -108,7 +111,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 18rem;
+  top: -8rem;
   margin: 0 auto;
   width: 100%;
   transition: opacity 0.4s ease;
@@ -122,7 +125,9 @@
   }
 
   &.hide-it {
-    opacity: 0;
+    @include breakpoint($tablet) {
+      opacity: 0;
+    }
   }
 
   &:before,

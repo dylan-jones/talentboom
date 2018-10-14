@@ -78,6 +78,17 @@
       </div>
       <div class="home-global-connections">
         <div class="container">
+          <h3>Our Global Connections</h3>
+          <div class="connections-blocks">
+            <ul class="locations">
+              <li><a href="<?php echo home_url(); ?>/connection/europe">Europe</a></li>
+              <li><a href="<?php echo home_url(); ?>/connection/usa">USA</a></li>
+              <li><a href="<?php echo home_url(); ?>/connection/middle-ease-and-africa">Middle East &amp; Africa</a></li>
+              <li><a href="<?php echo home_url(); ?>/connection/asia">Asia</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
           <h3>Our Clients</h3>
           <div class="connections-blocks">
             <?php 
@@ -93,19 +104,6 @@
                     <li><a href="<?php echo home_url(); ?>/our-clients" >View All Clients</a></li>
                 </ul>
             <?php endif; ?>
-          </div>
-        </div>
-      </div>
-      <div class="home-global-connections">
-        <div class="container">
-          <h3>Our Global Connections</h3>
-          <div class="connections-blocks">
-            <ul class="locations">
-              <li><a href="<?php echo home_url(); ?>/connection/europe">Europe</a></li>
-              <li><a href="<?php echo home_url(); ?>/connection/usa">USA</a></li>
-              <li><a href="<?php echo home_url(); ?>/connection/middle-ease-and-africa">Middle East &amp; Africa</a></li>
-              <li><a href="<?php echo home_url(); ?>/connection/asia">Asia</a></li>
-            </ul>
           </div>
         </div>
       </div>

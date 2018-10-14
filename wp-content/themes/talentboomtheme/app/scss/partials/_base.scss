@@ -53,6 +53,7 @@ img {
 a {
   color:#444;
   text-decoration:none;
+  transition: color 0.2s ease;
 
   &:hover {
     color:#444;

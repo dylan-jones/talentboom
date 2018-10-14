@@ -18,10 +18,10 @@
       </div>
       <div class="connections-map">
         <ul class="tabs">
-          <li><a href="<?php echo home_url(); ?>/connection/africa">Africa</a></li>
-          <li><a href="<?php echo home_url(); ?>/connection/asia">Asia</a></li>
           <li><a href="<?php echo home_url(); ?>/connection/europe">Europe</a></li>
           <li><a href="<?php echo home_url(); ?>/connection/usa">USA</a></li>
+          <li><a href="<?php echo home_url(); ?>/connection/middle-ease-and-africa">Middle East &amp; Africa</a></li>
+          <li><a href="<?php echo home_url(); ?>/connection/asia">Asia</a></li>
         </ul>
         <div class="map" id="map">
           <div class="container">
@@ -31,12 +31,20 @@
                 <div class="pin-location-pop">
                   <div class="title">The Talent Boom</div>
                   <div class="location">Cape Town</div>
+                  <div class="details">
+                    <span class="tel">+27 21 426 0961</span>
+                    <span class="address">32 Jamieson street, Gardens</span>
+                  </div>
                 </div>
               </a>
               <a href="<?php echo home_url(); ?>/connection/asia" class="pin pin-asia" data-loc="asia">
                 <div class="pin-location-pop">
                   <div class="title">The Talent Boom</div>
                   <div class="location">Location Name</div>
+                  <div class="details">
+                    <span class="tel">+27 21 426 0961</span>
+                    <span class="address">32 Jamieson street, Gardens</span>
+                  </div>
                 </div>
               </a>
               <a href="<?php echo home_url(); ?>/connection/europe" class="pin pin-europe" data-loc="europe">

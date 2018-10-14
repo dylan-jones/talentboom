@@ -12,31 +12,6 @@
           </div>
         </div>
       </div>
-      <?php /*
-      <div class="large-buttons-top">
-        <div class="container">
-          <div class="box">
-            <div class="landing">
-              <h3>I'm hiring <span>Talent</span></h3>
-            </div>
-            <div class="hidden">
-              Great! We have an awesome network of Senior to Key Executive talent and matching ability to help find you game changing talent wherever you are in the world. 
-              <a href="<?php echo home_url(); ?>/contact-us#looking-for-work">Lets get started!</a>
-            </div>
-          </div>
-          <div class="box">
-            <div class="landing">
-              <h3>I'm looking <span>For Work</span></h3>
-            </div>
-            <div class="hidden">
-              Great! We have an awesome network of Senior to Key Executive talent and matching ability to help find you game changing talent wherever you are in the world. 
-              <a href="<?php echo home_url(); ?>/contact-us#looking-for-work">Lets get started!</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      */ ?>
-
       <?php if( have_rows('big_boxes') ): ?>
         <div class="large-buttons-top">
           <div class="container">

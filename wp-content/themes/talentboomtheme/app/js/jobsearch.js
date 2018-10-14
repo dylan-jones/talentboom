@@ -44,7 +44,7 @@ $(document).ready(function(){
                              html += "  <h4>" + response[i].title + "</h4>";
                              html += "  <div class='company-name'>" + response[i].companyname + "</div>";
                              html += "  <div class='location'>" + response[i].location + "</div>";
-                             html += "  <a href='mailto:" + response[i].enquire + "' class='btn btn-outline'>Enquire</a>";
+                             html += "  <a href='mailto:hello@thetalentboom.com?subject=" + response[i].title + " Enquiry' class='btn btn-outline'>Enquire</a>";
                              html += "</div>";
                          jobform.find("#results").append(html);
                     }

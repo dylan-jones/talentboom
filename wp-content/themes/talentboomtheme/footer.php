@@ -12,7 +12,7 @@
 								<li><span>SA - HQ</span><a href="tel:+27214260961">+27 21 426 0961</a></li>
 								<li><span>NL</span><a href="tel:+31202619105">+31 20 261 9105</a></li>
 								<li><span>UK</span><a href="tel:+442079938872">+44 207 993 8872</a></li>
-								<li><span>US</span><a href="tel:+17864087665">+17 864 087 665</a></li>
+								<li><span>US</span><a href="tel:+17864087665">+1 786 408 7665</a></li>
 							</ul>
 						</div>
 						<div class="column">

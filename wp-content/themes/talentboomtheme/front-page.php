@@ -21,14 +21,16 @@
               $content = get_sub_field('content');
               $link = get_sub_field('link');
               ?>
+
               <div class="box">
                 <div class="landing">
                   <h3><?php echo $title; ?></h3>
                 </div>
                 <div class="hidden">
                   <?php echo $content; ?>
-                  <a href="<?php echo home_url(); ?>/contact-us#<?php echo $link; ?>">Lets get started!</a>
+                  <span>Lets get started!</span>
                 </div>
+                <a href="<?php echo home_url(); ?>/contact-us#<?php echo $link; ?>"></a>
               </div>
             <?php endwhile; ?>
           </div>
@@ -81,8 +83,8 @@
           <h3>Our Global Connections</h3>
           <div class="connections-blocks">
             <ul class="locations">
-              <li><a href="<?php echo home_url(); ?>/connection/europe">Europe</a></li>
               <li><a href="<?php echo home_url(); ?>/connection/usa">USA</a></li>
+              <li><a href="<?php echo home_url(); ?>/connection/europe">Europe</a></li>
               <li><a href="<?php echo home_url(); ?>/connection/middle-ease-and-africa">Middle East &amp; Africa</a></li>
               <li><a href="<?php echo home_url(); ?>/connection/asia">Asia</a></li>
             </ul>

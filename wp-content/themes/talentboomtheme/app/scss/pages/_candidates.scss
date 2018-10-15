@@ -87,14 +87,6 @@
         border-color: $dark-green;
       }
 
-      .title-two {
-
-      }
-
-      &-box-one {
-
-      }
-
       &.is-active {
         background-color: $dark-green;
         color: $white;
@@ -115,17 +107,18 @@
   .big-box {
     background-color: $lumo-green;
     color: $white;
-    justify-content: space-between;
     width: 100%;
     border-radius: 1rem;
     overflow: hidden;
     max-height: 0;
     opacity: 0;
     display: flex;
+    flex-wrap: wrap;
     transition: max-height 0.4s ease, opacity 0.4s ease;
 
     @include breakpoint($laptop) {
       order: 2;
+      flex-wrap: nowrap;
       
       &:nth-child(n+7) {
         order: 4;

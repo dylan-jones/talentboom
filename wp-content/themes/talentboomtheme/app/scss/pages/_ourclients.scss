@@ -25,17 +25,17 @@
     }
 
     ul {
-      margin: 2rem 0 0;
+      margin: 2rem -1% 0;
       padding: 0;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
 
       li {
         width: 49%;
         list-style: none;
         padding: 0;
-        margin-bottom: 2%;
+        margin-bottom: 1%;
+        margin-right: 1%;
         border: 3px solid rgba($primary-blue, 0.13);
         height: 7.2rem;
         background-color: $white;
@@ -76,7 +76,7 @@
     font-size: responsive 1.6rem 2.2rem;
 
     @include breakpoint($laptop) {
-      padding: 10rem 0;
+      padding: 10rem 2rem;
     }
 
     h3 {

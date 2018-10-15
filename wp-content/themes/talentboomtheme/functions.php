@@ -130,7 +130,7 @@ function html5blank_header_scripts()
 // Load HTML5 Blank conditional scripts
 function html5blank_conditional_scripts()
 {
-    if (is_page('our-connections')) {
+    if (is_page('about-us')) {
         wp_register_script('mapscript', get_template_directory_uri() . '/dist/mapscript.min.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('mapscript'); // Enqueue it!
     }

@@ -223,7 +223,7 @@
   height: 3.3rem;
   display: block;
   position: absolute;
-  cursor: pointer;
+  cursor: default;
   animation: pulse 2s ease infinite;
   background: {
     image: url(../img/pin.svg);
@@ -236,12 +236,15 @@
     .pin-location-pop {
       display: block;
     }
+
+    animation: none;
+    z-index: 50;
   }
 
-  &-africa {
+  &-cape-town {
     left: 15rem;
-    top: 13rem;
-    transform: scale(0.7);
+    top: 12.5rem;
+    transform: scale(0.5);
 
     @include breakpoint($tablet) {
       left: 37rem;
@@ -250,20 +253,42 @@
     }
 
     @include breakpoint($laptop) {
-      left: 53rem;
-      top: 49rem;
+      left: 53.5rem;
+      top: 49.5rem;
     }
 
     @include breakpoint($desktop) {
-      left: 64rem;
-      top: 60rem;
+      left: 64.2rem;
+      top: 59.6rem;
     }
   }
 
-  &-europe {
+  &-scotland {
+    left: 13rem;
+    top: 2.5rem;
+    transform: scale(0.5);
+
+    @include breakpoint($tablet) {
+      left: 32.5rem;
+      top: 11rem;
+      transform: scale(1);
+    }
+
+    @include breakpoint($laptop) {
+      left: 46.8rem;
+      top: 17rem;
+    }
+
+    @include breakpoint($desktop) {
+      left: 56.5rem;
+      top: 20.8rem;
+    }
+  }
+
+  &-amsterdam {
     left: 14rem;
-    top: 4rem;
-    transform: scale(0.7);
+    top: 3.5rem;
+    transform: scale(0.5);
 
     @include breakpoint($tablet) {
       left: 34rem;
@@ -272,57 +297,35 @@
     }
 
     @include breakpoint($laptop) {
-      left: 50rem;
-      top: 20rem;
+      left: 49.5rem;
+      top: 19.5rem;
     }
 
     @include breakpoint($desktop) {
-      left: 59rem;
-      top: 25rem;
+      left: 59.5rem;
+      top: 23.5rem;
     }
   }
 
-  &-asia {
-    left: 23.5rem;
-    top: 7rem;
-    transform: scale(0.7);
-
-    @include breakpoint($tablet) {
-      left: 57rem;
-      top: 20.5rem;
-      transform: scale(1);
-    }
-
-    @include breakpoint($laptop) {
-      left: 82rem;
-      top: 32rem;
-    }
-
-    @include breakpoint($desktop) {
-      left: 99rem;
-      top: 38rem;
-    }
-  }
-
-  &-usa {
+  &-miami {
     left: 5.5rem;
     top: 6rem;
-    transform: scale(0.7);
+    transform: scale(0.5);
 
     @include breakpoint($tablet) {
-      left: 15rem;
-      top: 18rem;
+      left: 14.6rem;
+      top: 19rem;
       transform: scale(1);
     }
 
     @include breakpoint($laptop) {
-      left: 21rem;
-      top: 28rem;
+      left: 21.5rem;
+      top: 28.5rem;
     }
 
     @include breakpoint($desktop) {
-      left: 26rem;
-      top: 33rem;
+      left: 26.1rem;
+      top: 34.5rem;
     }
   }
 

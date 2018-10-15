@@ -25,40 +25,35 @@
         </ul>
         <div class="map" id="map">
           <div class="container">
+            <?php get_template_part('/app/img/inline', 'new-map.svg'); ?>
+            <?php /* 
             <img src="<?php echo get_template_directory_uri(); ?>/app/img/map.svg" alt="map" />
+            */ ?>
             <div class="pin-locations">
-              <a href="<?php echo home_url(); ?>/connection/africa" class="pin pin-africa" data-loc="africa">
+              <div class="pin pin-cape-town" data-loc="cape-town">
                 <div class="pin-location-pop">
                   <div class="title">The Talent Boom</div>
                   <div class="location">Cape Town</div>
-                  <div class="details">
-                    <span class="tel">+27 21 426 0961</span>
-                    <span class="address">32 Jamieson street, Gardens</span>
-                  </div>
                 </div>
-              </a>
-              <a href="<?php echo home_url(); ?>/connection/asia" class="pin pin-asia" data-loc="asia">
+              </div>
+              <div class="pin pin-scotland" data-loc="scotland">
                 <div class="pin-location-pop">
                   <div class="title">The Talent Boom</div>
-                  <div class="location">Location Name</div>
-                  <div class="details">
-                    <span class="tel">+27 21 426 0961</span>
-                    <span class="address">32 Jamieson street, Gardens</span>
-                  </div>
+                  <div class="location">Scotland</div>
                 </div>
-              </a>
-              <a href="<?php echo home_url(); ?>/connection/europe" class="pin pin-europe" data-loc="europe">
+              </div>
+              <div class="pin pin-amsterdam" data-loc="amsterdam">
                 <div class="pin-location-pop">
                   <div class="title">The Talent Boom</div>
-                  <div class="location">Location Name</div>
+                  <div class="location">Amsterdam</div>
                 </div>
-              </a>
-              <a href="<?php echo home_url(); ?>/connection/usa" class="pin pin-usa" data-loc="usa">
+              </div>
+              <div class="pin pin-miami" data-loc="miami">
                 <div class="pin-location-pop">
                   <div class="title">The Talent Boom</div>
-                  <div class="location">Location Name</div>
+                  <div class="location">Miami</div>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>

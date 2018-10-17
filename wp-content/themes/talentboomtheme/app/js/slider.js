@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $('.slider').bxSlider({
     pager: false,
-    wrapperClass: 'slider'
+    wrapperClass: 'slider',
+    adaptiveHeight: true
   });
 });

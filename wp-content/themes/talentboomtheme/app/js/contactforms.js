@@ -5,7 +5,7 @@ $(document).ready(function(){
     $("."+urlHash).addClass('is-active');
 
     window.scrollTo({
-      top: 1000,
+      top: 100,
       behavior: "smooth"
     });
   }

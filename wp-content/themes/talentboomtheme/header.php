@@ -42,7 +42,7 @@
 					<!-- nav -->
 					<nav class="nav" role="navigation">
 						<?php header_nav(); ?>
-            <a href="<?php echo home_url(); ?>" class="btn btn-primary call-to-action">I'm looking to hire talent</a>
+            <a href="<?php echo home_url(); ?>/contact-us#looking-for-talent" class="btn btn-primary call-to-action">I'm looking to hire talent</a>
 					</nav>
 					<!-- /nav -->
           <button class="hamburger hamburger--collapse" type="button">

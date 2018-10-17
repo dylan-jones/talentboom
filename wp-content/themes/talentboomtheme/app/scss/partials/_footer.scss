@@ -23,11 +23,13 @@
         font-size: 1.8rem;
         flex-grow: 1;
         text-align: center;
+        margin-bottom: 3rem;
 
         @include breakpoint($laptop) {
           padding: 0 7rem;
           border-right: 1px solid $border-color;
           text-align: left;
+          margin-bottom: 0;
         }
 
         @include breakpoint($desktop) {
@@ -35,12 +37,13 @@
         }
 
         h4 {
-          margin: 0 0 2rem;
+          margin: 0 0 1.5rem;
           font-weight: $bold;
           font-size: responsive 2.3rem 2.8rem;
 
           @include breakpoint($laptop) {
             font-size: 2.4rem;
+            margin: 0 0 2rem;
           }
 
           @include breakpoint($desktop) {

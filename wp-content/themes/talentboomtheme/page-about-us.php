@@ -20,7 +20,7 @@
         <ul class="tabs">
           <li><a href="<?php echo home_url(); ?>/connection/usa">USA</a></li>
           <li><a href="<?php echo home_url(); ?>/connection/europe">Europe</a></li>
-          <li><a href="<?php echo home_url(); ?>/connection/middle-ease-and-africa">Middle East &amp; Africa</a></li>
+          <li><a href="<?php echo home_url(); ?>/connection/middle-east-and-africa">Middle East &amp; Africa</a></li>
           <li><a href="<?php echo home_url(); ?>/connection/asia">Asia</a></li>
         </ul>
         <div class="map" id="map">

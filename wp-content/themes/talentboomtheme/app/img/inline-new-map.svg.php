@@ -4,6 +4,6 @@
 	.st0{fill:#22E0A6;}
 	.st1{fill:#158677;}
 </style>
-<image style="overflow:visible;" width="2398" height="1472" xlink:href="../wp-content/themes/talentboomtheme/app/img/Map_02@2x.png"  transform="matrix(0.5 0 0 0.5 0 -0.1)">
+<image style="overflow:visible;" width="2398" height="1472" xlink:href="../wp-content/themes/talentboomtheme/dist/img/Map_02@2x.png"  transform="matrix(0.5 0 0 0.5 0 -0.1)">
 </image>
 </svg>

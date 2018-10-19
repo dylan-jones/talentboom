@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.457 26.285">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #3c4b54;
-      }
-    </style>
-  </defs>
-  <g id="Group_1966" data-name="Group 1966" transform="translate(17.084 -0.172) rotate(45)">
-    <path id="Path_3131" data-name="Path 3131" class="cls-1" d="M10.7,0c4.9,0,8.918,5.391,8.918,12.08S15.645,24.16,10.7,24.16V16.093h3.527V8.229L10.7,8.27V0Z" transform="translate(-6.363)"/>
-    <path id="Path_3132" data-name="Path 3132" class="cls-1" d="M.627.5C.343.5.1,2.284.1,4.473S.343,8.445.627,8.445H2.694V.5Z" transform="translate(-0.059 -0.297)"/>
-    <path id="Path_3133" data-name="Path 3133" class="cls-1" d="M.527,39.8C.243,39.8,0,41.584,0,43.813s.243,4.013.527,4.013H2.675V39.8Z" transform="translate(0 -23.666)"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.457 26.285"><defs><style>.cls-1{fill:#3c4b54}</style></defs><g id="Group_1966" data-name="Group 1966" transform="rotate(45 8.75 20.536)"><path id="Path_3131" data-name="Path 3131" class="cls-1" d="M10.7 0c4.9 0 8.918 5.391 8.918 12.08S15.645 24.16 10.7 24.16v-8.067h3.527V8.229L10.7 8.27V0z" transform="translate(-6.363)"/><path id="Path_3132" data-name="Path 3132" class="cls-1" d="M.627.5C.343.5.1 2.284.1 4.473s.243 3.972.527 3.972h2.067V.5z" transform="translate(-.059 -.297)"/><path id="Path_3133" data-name="Path 3133" class="cls-1" d="M.527 39.8C.243 39.8 0 41.584 0 43.813s.243 4.013.527 4.013h2.148V39.8z" transform="translate(0 -23.666)"/></g></svg>

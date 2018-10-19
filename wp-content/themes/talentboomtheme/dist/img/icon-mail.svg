@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.104 16.997">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #3c4b54;
-      }
-    </style>
-  </defs>
-  <g id="Group_1967" data-name="Group 1967" transform="translate(0)">
-    <path id="Path_3134" data-name="Path 3134" class="cls-1" d="M11.915,8.973s1.021,1.568,2.809-.365L23.04,1.021S24.061.073,22.42,0H3.6S2.432.036,3.015.839Z" transform="translate(-1.812)"/>
-    <path id="Path_3135" data-name="Path 3135" class="cls-1" d="M48.2,18.032V7.527c-.219-1.568-1.131-.474-1.131-.474l-5.836,5.653c-.511.511.4.948.4.948l5.252,4.778c1.35,1.422,1.313-.4,1.313-.4" transform="translate(-26.093 -4.245)"/>
-    <path id="Path_3136" data-name="Path 3136" class="cls-1" d="M22.694,32.982,15.436,27a4.746,4.746,0,0,1-2.48,1.167A4.451,4.451,0,0,1,10.512,27L3.253,32.982c-.948.657.219,1.167.219,1.167H22.439c.036,0,1.2-.511.255-1.167" transform="translate(-1.831 -17.152)"/>
-    <path id="Path_3137" data-name="Path 3137" class="cls-1" d="M0,18.248V8.181c.255-1.5,1.2-.474,1.2-.474L7.55,13.142c.547.474-.438.875-.438.875l-5.653,4.6C-.037,20,0,18.248,0,18.248" transform="translate(0 -4.68)"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.104 16.997"><defs><style>.cls-1{fill:#3c4b54}</style></defs><g id="Group_1967" data-name="Group 1967"><path id="Path_3134" data-name="Path 3134" class="cls-1" d="M11.915 8.973s1.021 1.568 2.809-.365l8.316-7.587S24.061.073 22.42 0H3.6s-1.168.036-.585.839z" transform="translate(-1.812)"/><path id="Path_3135" data-name="Path 3135" class="cls-1" d="M48.2 18.032V7.527c-.219-1.568-1.131-.474-1.131-.474l-5.836 5.653c-.511.511.4.948.4.948l5.252 4.778c1.35 1.422 1.313-.4 1.313-.4" transform="translate(-26.093 -4.245)"/><path id="Path_3136" data-name="Path 3136" class="cls-1" d="M22.694 32.982L15.436 27a4.746 4.746 0 0 1-2.48 1.167A4.451 4.451 0 0 1 10.512 27l-7.259 5.982c-.948.657.219 1.167.219 1.167h18.967c.036 0 1.2-.511.255-1.167" transform="translate(-1.831 -17.152)"/><path id="Path_3137" data-name="Path 3137" class="cls-1" d="M0 18.248V8.181c.255-1.5 1.2-.474 1.2-.474l6.35 5.435c.547.474-.438.875-.438.875l-5.653 4.6C-.037 20 0 18.248 0 18.248" transform="translate(0 -4.68)"/></g></svg>

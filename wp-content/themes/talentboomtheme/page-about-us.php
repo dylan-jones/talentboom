@@ -3,7 +3,7 @@
     <section>
       <div class="intro-section">
         <div class="image">
-          <img src="<?php echo get_template_directory_uri(); ?>/app/img/about-header-image.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/img/about-header-image.png" alt="">
         </div>
         <div class="container">
           <div class="content">
@@ -27,7 +27,7 @@
           <div class="container">
             <?php get_template_part('/app/img/inline', 'new-map.svg'); ?>
             <?php /* 
-            <img src="<?php echo get_template_directory_uri(); ?>/app/img/map.svg" alt="map" />
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/img/map.svg" alt="map" />
             */ ?>
             <div class="pin-locations">
               <div class="pin pin-cape-town" data-loc="cape-town">

@@ -3,7 +3,7 @@
     <section>
       <div class="intro-section">
         <div class="image">
-          <img src="<?php echo get_template_directory_uri(); ?>/app/img/ourtalent-header-image.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/img/ourtalent-header-image.png" alt="">
         </div>
         <div class="container">
           <div class="content">

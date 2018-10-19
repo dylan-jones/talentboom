@@ -3,7 +3,7 @@
     <section>
       <div class="landing-top">
         <div class="image">
-          <img src="<?php echo get_template_directory_uri(); ?>/app/img/home-header-image.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/img/home-header-image.png" alt="">
         </div>
         <div class="container">
           <div class="content">
@@ -41,7 +41,7 @@
           <h3>Quick Job Search</h3>
           <form role="search" method="get" id="searchform" action="" class="form">
             <div>
-              <img src="<?php echo get_template_directory_uri(); ?>/app/img/duration.svg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/img/duration.svg" alt="">
               <select name="duration" id="duration" >
                 <option value="fulltime">Full Time</option>
                 <option value="parttime">Part Time</option>
@@ -49,11 +49,11 @@
               </select>
             </div>
             <div>
-              <img src="<?php echo get_template_directory_uri(); ?>/app/img/location.svg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/img/location.svg" alt="">
               <input type="text" placeholder="Cape Town, SA" value="" name="location" id="location">
             </div>
             <div>
-              <img src="<?php echo get_template_directory_uri(); ?>/app/img/search.svg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/img/search.svg" alt="">
               <input type="text" placeholder="Marketing" value="" name="search" id="search" >
             </div>
             <button class="btn btn-primary" id="searchsubmit">Search Jobs</button>
@@ -65,7 +65,7 @@
       </div>
       <div class="about-section">
         <div class="image">
-          <img src="<?php echo get_template_directory_uri(); ?>/app/img/home-about-image.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/img/home-about-image.png" alt="">
         </div>
         <div class="container">
           <div class="content">

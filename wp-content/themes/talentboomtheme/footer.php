@@ -18,9 +18,9 @@
 						<div class="column">
 							<h4>Connect with the Boomers</h4>
 							<div class="social-icons">
-								<a href="https://www.facebook.com/TheTalentBoom" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/app/img/icon-facebook.svg" alt=""></a>
-								<a href="https://twitter.com/thetalentboom" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/app/img/icon-twitter.svg" alt=""></a>
-								<a href="https://www.linkedin.com/company/the-talent-boom" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/app/img/icon-linkedin.svg" alt=""></a>
+								<a href="https://www.facebook.com/TheTalentBoom" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-facebook.svg" alt=""></a>
+								<a href="https://twitter.com/thetalentboom" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-twitter.svg" alt=""></a>
+								<a href="https://www.linkedin.com/company/the-talent-boom" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-linkedin.svg" alt=""></a>
 							</div>
 						</div>
 					</div>

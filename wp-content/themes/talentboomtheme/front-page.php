@@ -50,11 +50,11 @@
             </div>
             <div>
               <img src="<?php echo get_template_directory_uri(); ?>/dist/img/location.svg" alt="">
-              <input type="text" placeholder="Cape Town, SA" value="" name="location" id="location">
+              <input type="text" placeholder="Miami, FL" value="" name="location" id="location">
             </div>
             <div>
               <img src="<?php echo get_template_directory_uri(); ?>/dist/img/search.svg" alt="">
-              <input type="text" placeholder="Marketing" value="" name="search" id="search" >
+              <input type="text" placeholder="Creative Director" value="" name="search" id="search" >
             </div>
             <button class="btn btn-primary" id="searchsubmit">Search Jobs</button>
           </form>
@@ -103,7 +103,7 @@
                           <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                         </li>
                     <?php endforeach; ?>
-                    <li><a href="<?php echo home_url(); ?>/our-clients" >View All Clients</a></li>
+                    <li><a href="<?php echo home_url(); ?>/for-clients" >View All Clients</a></li>
                 </ul>
             <?php endif; ?>
           </div>

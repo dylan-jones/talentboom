@@ -91,6 +91,37 @@
       &:last-child {
         margin-bottom: 0;
       }
+
+      span {
+        font-size: responsive 1.6rem 2.4rem;
+        color: $white;
+
+        a {
+          color: $light-green;
+          text-decoration: underline;
+        }
+
+        &.wpcf7-not-valid-tip {
+          display: block;
+          margin: 5px 0;
+          font-size: 1.4rem;
+          font-style: italic;
+          position: absolute;
+          width: 25rem;
+        }
+      }
+    }
+
+    div.wpcf7-response-output {
+      border-radius: 0.5rem;
+      color: $white;
+      border: 2px solid $light-green;
+      text-align: center;
+    }
+
+    div.wpcf7-validation-errors, 
+    div.wpcf7-acceptance-missing {
+      border: 2px solid $light-green;
     }
 
     input[type="submit"] {
@@ -98,6 +129,58 @@
         position: absolute;
         right: 0;
         top: 1.5rem;
+      }
+    }
+
+    .checkbox-privacy {
+      display: inline-block;
+      vertical-align: middle;
+
+      .wpcf7-list-item {
+        margin: 0;
+      }
+
+      label {
+        position: relative;
+        overflow: hidden;
+        margin-right: 0.5rem;
+        display: inline-block;
+        height: 3.1rem;
+        width: 3.1rem;
+
+        input {
+          display: none;
+        }
+
+        span {
+          font-size: 0;
+          width: 3.1rem;
+          height: 3.1rem;
+          display: inline-block;
+          background: $white;
+          border: 2px solid #0A6C5F;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        :checked + span {
+          background:#fafafa;
+          
+          &:before {
+            content: '✔';
+            width: 3rem;
+            height: 3rem;
+            display: block;
+            position: absolute;
+            top: -5px;
+            left: 2px;
+            color: $light-green;
+            font-size: 2.6rem;
+          }
+        }
       }
     }
 

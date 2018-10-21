@@ -62,6 +62,11 @@
           <div id="results" class="form-results"></div>
 
         </div>
+        <?php if( get_field('extra_content_job_search') ): ?>
+          <div class="container">
+            <?php the_field('extra_content_job_search'); ?>
+          </div>
+        <?php endif; ?>
       </div>
       <div class="about-section">
         <div class="image">
@@ -90,6 +95,11 @@
             </ul>
           </div>
         </div>
+        <?php if( get_field('extra_content_global_connections') ): ?>
+          <div class="container">
+            <?php the_field('extra_content_global_connections'); ?>
+          </div>
+        <?php endif; ?>
         <div class="container">
           <h3>Our Clients</h3>
           <div class="connections-blocks">
@@ -108,6 +118,11 @@
             <?php endif; ?>
           </div>
         </div>
+        <?php if( get_field('extra_content_our_clients') ): ?>
+          <div class="container">
+            <?php the_field('extra_content_our_clients'); ?>
+          </div>
+        <?php endif; ?>
       </div>
       <div class="testimonial-slider">
         <div class="container">

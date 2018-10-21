@@ -54,6 +54,18 @@
                   <div class="location">Miami</div>
                 </div>
               </div>
+              <div class="pin pin-middle-east" data-loc="middle-east">
+                <div class="pin-location-pop">
+                  <div class="title">The Middle East</div>
+                  <div class="location">Serviced by our Cape Town office</div>
+                </div>
+              </div>
+              <div class="pin pin-asia" data-loc="asia">
+                <div class="pin-location-pop">
+                  <div class="title">The Middle East</div>
+                  <div class="location">Serviced by our Amsterdam office</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

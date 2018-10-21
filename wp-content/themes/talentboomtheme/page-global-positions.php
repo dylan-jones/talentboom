@@ -43,6 +43,11 @@
             <?php endif; ?>
           </div>
         </div>
+        <?php if( get_field('extra_content') ): ?>
+          <div class="container">
+            <?php the_field('extra_content'); ?>
+          </div>
+        <?php endif; ?>
       </div>
     </section>
   </main>

@@ -124,6 +124,10 @@
       border: 2px solid $light-green;
     }
 
+    div.wpcf7-mail-sent-ok {
+     background-color: $light-green; 
+    }
+
     input[type="submit"] {
       @include breakpoint($laptop) {
         position: absolute;

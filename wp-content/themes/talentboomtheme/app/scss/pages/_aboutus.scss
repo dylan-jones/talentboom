@@ -47,6 +47,7 @@
       transform: translate(78rem,-33rem);
       width: 100rem;
       margin: 0 auto;
+      transform-origin: top right;
     }
 
     @include breakpoint($laptop) {
@@ -326,6 +327,50 @@
     @include breakpoint($desktop) {
       left: 26.1rem;
       top: 34.5rem;
+    }
+  }
+
+  &-middle-east {
+    left: 18rem;
+    top: 6.5rem;
+    transform: scale(0.5);
+
+    @include breakpoint($tablet) {
+      left: 43.5rem;
+      top: 19.5rem;
+      transform: scale(1);
+    }
+
+    @include breakpoint($laptop) {
+      left: 63rem;
+      top: 29.5rem;
+    }
+
+    @include breakpoint($desktop) {
+      left: 76rem;
+      top: 35.5rem;
+    }
+  }
+
+  &-asia {
+    left: 23rem;
+    top: 7.4rem;
+    transform: scale(0.5);
+
+    @include breakpoint($tablet) {
+      left: 55.8rem;
+      top: 21.6rem;
+      transform: scale(1);
+    }
+
+    @include breakpoint($laptop) {
+      left: 80.2rem;
+      top: 31.6rem;
+    }
+
+    @include breakpoint($desktop) {
+      left: 96.8rem;
+      top: 38.6rem;
     }
   }
 

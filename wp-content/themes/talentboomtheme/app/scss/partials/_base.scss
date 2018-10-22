@@ -116,10 +116,10 @@ input:focus {
 }
 
 .padding-bellow {
-  padding-bottom: 6rem;
+  padding-bottom: 6rem !important;
 
   @include breakpoint($laptop) {
-    padding-bottom: 16rem;
+    padding-bottom: 16rem !important;
   }
 }
 

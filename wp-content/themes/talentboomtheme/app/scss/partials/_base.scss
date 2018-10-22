@@ -29,6 +29,10 @@ body {
   font-size: responsive 1.6rem 2.2rem;
   font-weight: $base-font-weight;
   background-color: $background-grey;
+
+  &.menu-active {
+    overflow: hidden;
+  }
 }
 
 .clear {

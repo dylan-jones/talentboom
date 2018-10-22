@@ -96,7 +96,7 @@
           </div>
         </div>
         <?php if( get_field('extra_content_global_connections') ): ?>
-          <div class="container">
+          <div class="container padding-bellow">
             <?php the_field('extra_content_global_connections'); ?>
           </div>
         <?php endif; ?>

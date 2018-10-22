@@ -62,7 +62,7 @@
               </div>
               <div class="pin pin-asia" data-loc="asia">
                 <div class="pin-location-pop">
-                  <div class="title">The Middle East</div>
+                  <div class="title">Asia</div>
                   <div class="location">Serviced by our Amsterdam office</div>
                 </div>
               </div>

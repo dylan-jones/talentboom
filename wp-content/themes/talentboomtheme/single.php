@@ -19,7 +19,10 @@
 
 						<div class="content">
 							<?php the_content(); // Dynamic Content ?>
+
+							<?php add_share_buttons(); ?>
 						</div>
+
 					</article>
 
 				<?php endwhile; ?>
@@ -33,8 +36,6 @@
 					</article>
 
 				<?php endif; ?>
-
-				<?php add_share_buttons_after_content(); ?>
 
 				<div class="pagination">
 					<?php previous_post_link('%link','Previous Post'); ?>

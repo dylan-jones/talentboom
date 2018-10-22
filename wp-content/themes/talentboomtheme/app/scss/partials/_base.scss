@@ -115,6 +115,14 @@ input:focus {
   }
 }
 
+.padding-bellow {
+  padding-bottom: 6rem;
+
+  @include breakpoint($laptop) {
+    padding-bottom: 16rem;
+  }
+}
+
 /*------------------------------------*\
     MISC
 \*------------------------------------*/

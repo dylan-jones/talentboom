@@ -8,4 +8,11 @@ $(document).ready(function($) {
     mobileMenu.classList.toggle("is-active");
     $('body').toggleClass("menu-active");
   });
+
+
+  var dropDown = document.querySelector(".mobile-nav ul li.menu-item-has-children");
+
+  dropDown.addEventListener("click", function() {
+    this.classList.toggle("is-active");
+  });
 });

@@ -293,7 +293,7 @@
         }
 
         &.current_page_item,
-        &:hover {
+        &.is-active {
           a {
             color: $dark-green;
           }
@@ -307,7 +307,7 @@
           }
         }
 
-        &:hover {
+        &.is-active {
           .sub-menu {
             max-height: 999rem;
             transition: max-height 0.4s ease;
